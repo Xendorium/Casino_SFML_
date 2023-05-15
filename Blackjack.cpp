@@ -10,8 +10,19 @@ using namespace std;
 
 void Blackjack::start_game()
 {
+    //wczytanie czcionki
+    sf::Font font;
+    font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
+
     //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
+
+    //utworzenie napisu
+    sf::Text text;
+    text = Drawing().text("Blackjack",352,30,font);
+
+    sf::RectangleShape button;
+    button = Drawing().draw_button(312, 10);
 
     std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
 
@@ -84,7 +95,7 @@ void Blackjack::start_game()
 
     sf::Sprite sprite[54];
     sprite[53].setTexture(card[53]);
-    sprite[53].setPosition(934.f,174.f);
+    sprite[53].setPosition(934.f,230.f);
 
 
     //Dobieranie kart i pokazywanie ich przez gracza
@@ -107,6 +118,8 @@ void Blackjack::start_game()
                 window.close();
         }
         window.clear();
+        window.draw(button);
+        window.draw(text);
         window.draw(sprite[53]);
         window.display();
     }
