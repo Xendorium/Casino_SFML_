@@ -12,7 +12,6 @@
 //tworzenie napisów
 sf::Text Drawing::text(std::string text, int x, int y,sf::Font& font)
 {
-
     sf::Text lettering(text, font, 50);
     lettering.setFillColor(sf::Color::Yellow);
     lettering.setPosition(x, y);

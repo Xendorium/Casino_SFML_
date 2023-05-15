@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp Games.cpp Games.h Game_selection.cpp Game_selection.h Drawing.cpp Drawing.h)
+set(SOURCE_FILES main.cpp Games.h Game_selection.cpp Game_selection.h Drawing.cpp Drawing.h Blackjack.cpp Blackjack.h Deck.h Players.cpp Players.h)
 add_executable(Casino_SFML_ ${SOURCE_FILES})
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
