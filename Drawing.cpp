@@ -7,11 +7,12 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+
+
 //tworzenie napisów
-sf::Text Drawing::text(std::string text, int x, int y)
+sf::Text Drawing::text(std::string text, int x, int y,sf::Font& font)
 {
-    sf::Font font;
-    font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
+
     sf::Text lettering(text, font, 50);
     lettering.setFillColor(sf::Color::Yellow);
     lettering.setPosition(x, y);

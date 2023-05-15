@@ -12,7 +12,7 @@
 class Drawing {
 public:
     sf::RectangleShape draw_button(int x, int y);
-    sf::Text text(std::string text, int x, int y);
+    sf::Text text(std::string text, int x, int y, sf::Font& font);
 };
 
 
