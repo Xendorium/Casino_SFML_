@@ -5,8 +5,6 @@
 #include "Drawing.h"
 
 #include "Deck.h"
-#include "Players.h"
-
 
 using namespace std;
 
@@ -17,7 +15,7 @@ int main()
 
     //załadowanie grfiki menu
     sf::Texture menu;
-    menu.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/menu.png");
+    menu.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/menu/menu.png");
     sf::Sprite sprite;
     sprite.setTexture(menu);
 

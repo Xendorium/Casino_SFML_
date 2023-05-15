@@ -6,7 +6,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "Drawing.h"
-#include "Deck.h"
+#include "Blackjack.h"
 
 void Game_selection::show_games() {
 
@@ -44,7 +44,8 @@ void Game_selection::show_games() {
             sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
             if (button[0].getGlobalBounds().contains(mousePos)) {
                 window.close();
-                std::cout<< "wybrales black jacka" << std::endl;
+                Blackjack *Blackjack1 = new Blackjack;
+                Blackjack1->start_game();
             }
             if (button[1].getGlobalBounds().contains(mousePos)) {
                 window.close();

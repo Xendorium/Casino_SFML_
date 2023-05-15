@@ -13,14 +13,15 @@ using namespace std;
 
 class Deck {
 public:
+    //stworzenie struktury karty
     struct card
     {
         string points;
         string sign;
         int points_BJ;
     };
-
-    vector <card> deck = {
+    //stworzenie vectora kart
+     vector <card> deck = {
             {"two","hearts",2},{"two","clubs",2},{"two","diamonds",2},{"two","spades",2},
             {"three","hearts",3},{"three","clubs",3},{"three","diamonds",3},{"three","spades",3},
             {"four","hearts",4},{"four","clubs",4},{"four","diamonds",4},{"four","spades",4},
@@ -35,7 +36,9 @@ public:
             {"king","hearts",10},{"king","clubs",10},{"king","diamonds",10},{"king","spades",10},
             {"ace","hearts",1},{"ace","clubs",1},{"ace","diamonds",1},{"ace","spades",1}
     };
+     //stworzenia nowoczesnego wskaźnika na deck
     unique_ptr<vector<card>> deck_ptr = make_unique<vector<card>>(deck);
+
 };
 
 

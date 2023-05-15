@@ -6,24 +6,48 @@
 #include "Players.h"
 #include <random>
 #include <vector>
+#include <chrono>
 
 using namespace std;
 
-void Players::draw(unique_ptr<vector<Deck::card>>&deck_ptr)
+//funkcja dobierająca karte
+void Players::draw(vector<Deck::card>& deck)
 {
     int j;
     j = random_number();
-    Deck::card C1 = (*deck_ptr)[j];
+    Deck::card C1 = deck[j];
     hand.push_back(C1);
-    deck_ptr->erase(deck_ptr->begin()+j);
+    deck.erase(deck.begin()+j);
+}
+//funkcja pokazująca karty
+void Players::show_cards()
+{
+    for (int i = 0; i < hand.size(); i++)
+    {
+        cout << hand[i].sign << endl;
+        cout << hand[i].points << endl;
+        cout << hand[i].points_BJ << endl;
+    }
+    cout << "Suma twoich kart " << sum() << endl;
 }
 
+//funkcja sumujaca punkty do Blackjacka
+int Players::sum()
+{   int sum;
+    for(int i = 0; i < hand.size(); i++)
+    {
+       sum = sum + hand[i].points_BJ;
+    }
+    return sum;
+}
+
+//funkcja losująca liczbe
 int Players::random_number()
 {
     int j;
-    random_device rd;
-    mt19937 mt(rd());
-    uniform_real_distribution<double> dist(0, 51 - hand.size());
-    j = dist(mt);
+    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
+    mt19937 gen(seed);
+    uniform_int_distribution<int> dist(0, 51 - hand.size());
+    j = dist(gen);
     return j;
 }

@@ -7,14 +7,18 @@
 
 #include <vector>
 #include "Deck.h"
+#include <random>
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+#include "Drawing.h"
 
 class Players {
 public:
-    void draw(unique_ptr<vector<Deck::card>>& deck_ptr);
+    void draw(vector<Deck::card>& deck);
     void clear_hand();
     void show_cards();
+    int sum();
     vector <Deck::card> hand = {};
-    int sum = 0;
 private:
     int random_number();
 };
