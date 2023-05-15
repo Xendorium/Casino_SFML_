@@ -23,24 +23,24 @@ void Game_selection::show_games() {
 
     sf::Text text1("Blackjack", font, 50);
     text1.setFillColor(sf::Color::Yellow);
-    text1.setPosition(330, 100);
+    text1.setPosition(130, 332);
 
     sf::Text text2("Spin", font, 50);
     text2.setFillColor(sf::Color::Yellow);
-    text2.setPosition(330, 100);
+    text2.setPosition(660, 332);
 
    //utworzenie przycisków
     sf::RectangleShape button(sf::Vector2f(400, 100));
     button.setFillColor(sf::Color::Black);
     button.setOutlineThickness(5);
     button.setOutlineColor(sf::Color::Yellow);
-    button.setPosition(90, 312);
+    button.setPosition(85, 312);
 
     sf::RectangleShape button1(sf::Vector2f(400, 100));
     button1.setFillColor(sf::Color::Black);
     button1.setOutlineThickness(5);
     button1.setOutlineColor(sf::Color::Yellow);
-    button1.setPosition(510, 312);
+    button1.setPosition(515, 312);
 
     while (window.isOpen())
     {
