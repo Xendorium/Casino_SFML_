@@ -24,8 +24,8 @@ int main()
     font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
 
     //przypisywanie rysowania
-    sf::RectangleShape button = Drawing().draw_button(300, 400, 400 , 100);
-    sf::Text write = Drawing().text("Start Game",320,420,font);
+    sf::RectangleShape button = Drawing().draw_button(298, 350, 400 , 100);
+    sf::Text write = Drawing().text("Start Game",318,370,font);
 
     while (window.isOpen())
     {

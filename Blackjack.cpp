@@ -6,6 +6,7 @@
 #include "Blackjack.h"
 #include "Players.h"
 #include "Game_selection.h"
+#include "string"
 
 using namespace std;
 
@@ -109,10 +110,6 @@ void Blackjack::start_game()
     sprite[53].setTexture(card[53]);
     sprite[53].setPosition(934.f,230.f);
 
-    //Ustawianie kart na ręce
-    int x = 0;
-    int y = 474;
-
     //Dobieranie kart i pokazywanie ich przez gracza
     Player->draw(*(deck_ptr->deck_ptr),2);
     show_hand_Player();
@@ -139,6 +136,464 @@ void Blackjack::start_game()
                     end_game();
                     window.close();
                     Game_selection::show_games();
+                }
+            }
+            for(int i = 0; i < Player->hand.size();i++)
+            {
+                int x = 100*i ;
+
+                if(Player->hand[i].sign == "hearts")
+                {
+                    if (Player->hand[i].points == "two")
+                    {
+                        sprite[i].setTexture(card[14]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "three")
+                    {
+                        sprite[i].setTexture(card[15]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "four")
+                    {
+                        sprite[i].setTexture(card[16]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "five")
+                    {
+                        sprite[i].setTexture(card[17]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "six")
+                    {
+                        sprite[i].setTexture(card[18]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "seven")
+                    {
+                        sprite[i].setTexture(card[19]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "eight")
+                    {
+                        sprite[i].setTexture(card[20]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "nine")
+                    {
+                        sprite[i].setTexture(card[21]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "ten")
+                    {
+                        sprite[i].setTexture(card[22]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "jack")
+                    {
+                        sprite[i].setTexture(card[23]);
+                        sprite[i].setPosition(x,470);
+                    }
+                    if (Player->hand[i].points == "queen")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "king")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "ace")
+                    {
+
+                    }
+                }
+                if(Player->hand[i].sign == "clubs")
+                {
+                    if (Player->hand[i].points == "two")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "three")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "four")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "five")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "six")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "seven")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "eight")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "nine")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "ten")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "jack")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "queen")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "king")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "ace")
+                    {
+
+                    }
+                }
+                if(Player->hand[i].sign == "diamonds")
+                {
+                    if (Player->hand[i].points == "two")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "three")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "four")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "five")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "six")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "seven")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "eight")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "nine")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "ten")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "jack")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "queen")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "king")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "ace")
+                    {
+
+                    }
+                }
+                if(Player->hand[i].sign == "spades")
+                {
+                    if (Player->hand[i].points == "two")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "three")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "four")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "five")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "six")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "seven")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "eight")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "nine")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "ten")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "jack")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "queen")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "king")
+                    {
+
+                    }
+                    if (Player->hand[i].points == "ace")
+                    {
+
+                    }
+                }
+            }
+            for(int i = 0; i < Dealer->hand.size();i++)
+            {
+                if(Dealer->hand[i].sign == "hearts")
+                {
+                    if (Dealer->hand[i].points == "two")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "three")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "four")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "five")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "six")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "seven")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "eight")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "nine")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "ten")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "jack")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "queen")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "king")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "ace")
+                    {
+
+                    }
+                }
+                if(Dealer->hand[i].sign == "clubs")
+                {
+                    if (Dealer->hand[i].points == "two")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "three")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "four")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "five")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "six")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "seven")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "eight")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "nine")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "ten")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "jack")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "queen")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "king")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "ace")
+                    {
+
+                    }
+                }
+                if(Dealer->hand[i].sign == "diamonds")
+                {
+                    if (Dealer->hand[i].points == "two")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "three")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "four")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "five")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "six")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "seven")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "eight")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "nine")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "ten")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "jack")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "queen")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "king")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "ace")
+                    {
+
+                    }
+                }
+                if(Dealer->hand[i].sign == "spades")
+                {
+                    if (Dealer->hand[i].points == "two")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "three")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "four")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "five")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "six")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "seven")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "eight")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "nine")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "ten")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "jack")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "queen")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "king")
+                    {
+
+                    }
+                    if (Dealer->hand[i].points == "ace")
+                    {
+
+                    }
                 }
             }
         }
