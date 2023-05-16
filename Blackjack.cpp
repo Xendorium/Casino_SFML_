@@ -110,6 +110,7 @@ void Blackjack::start_game()
     sprite[53].setTexture(card[53]);
     sprite[53].setPosition(934.f,230.f);
 
+
     //Dobieranie kart i pokazywanie ich przez gracza
     Player->draw(*(deck_ptr->deck_ptr),2);
     show_hand_Player();
@@ -138,7 +139,7 @@ void Blackjack::start_game()
                     Game_selection::show_games();
                 }
             }
-            for(int i = 0; i < Player->hand.size();i++)
+           /* for(int i = 0; i < Player->hand.size();i++)
             {
                 int x = 100*i ;
 
@@ -196,416 +197,518 @@ void Blackjack::start_game()
                     }
                     if (Player->hand[i].points == "queen")
                     {
-
+                        sprite[i].setTexture(card[24]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "king")
                     {
-
+                        sprite[i].setTexture(card[25]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "ace")
                     {
-
+                        sprite[i].setTexture(card[26]);
+                        sprite[i].setPosition(x,470);
                     }
                 }
                 if(Player->hand[i].sign == "clubs")
                 {
                     if (Player->hand[i].points == "two")
                     {
-
+                        sprite[i].setTexture(card[27]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "three")
                     {
-
+                        sprite[i].setTexture(card[28]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "four")
                     {
-
+                        sprite[i].setTexture(card[29]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "five")
                     {
-
+                        sprite[i].setTexture(card[30]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "six")
                     {
-
+                        sprite[i].setTexture(card[31]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "seven")
                     {
-
+                        sprite[i].setTexture(card[32]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "eight")
                     {
-
+                        sprite[i].setTexture(card[33]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "nine")
                     {
-
+                        sprite[i].setTexture(card[34]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "ten")
                     {
-
+                        sprite[i].setTexture(card[35]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "jack")
                     {
-
+                        sprite[i].setTexture(card[36]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "queen")
                     {
-
+                        sprite[i].setTexture(card[37]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "king")
                     {
-
+                        sprite[i].setTexture(card[38]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "ace")
                     {
-
+                        sprite[i].setTexture(card[39]);
+                        sprite[i].setPosition(x,470);
                     }
                 }
                 if(Player->hand[i].sign == "diamonds")
                 {
                     if (Player->hand[i].points == "two")
                     {
-
+                        sprite[i].setTexture(card[40]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "three")
                     {
-
+                        sprite[i].setTexture(card[41]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "four")
                     {
-
+                        sprite[i].setTexture(card[42]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "five")
                     {
-
+                        sprite[i].setTexture(card[43]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "six")
                     {
-
+                        sprite[i].setTexture(card[44]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "seven")
                     {
-
+                        sprite[i].setTexture(card[45]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "eight")
                     {
-
+                        sprite[i].setTexture(card[46]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "nine")
                     {
-
+                        sprite[i].setTexture(card[47]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "ten")
                     {
-
+                        sprite[i].setTexture(card[48]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "jack")
                     {
-
+                        sprite[i].setTexture(card[49]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "queen")
                     {
-
+                        sprite[i].setTexture(card[50]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "king")
                     {
-
+                        sprite[i].setTexture(card[51]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "ace")
                     {
-
+                        sprite[i].setTexture(card[52]);
+                        sprite[i].setPosition(x,470);
                     }
                 }
                 if(Player->hand[i].sign == "spades")
                 {
                     if (Player->hand[i].points == "two")
                     {
-
+                        sprite[i].setTexture(card[0]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "three")
                     {
-
+                        sprite[i].setTexture(card[1]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "four")
                     {
-
+                        sprite[i].setTexture(card[2]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "five")
                     {
-
+                        sprite[i].setTexture(card[3]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "six")
                     {
-
+                        sprite[i].setTexture(card[4]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "seven")
                     {
-
+                        sprite[i].setTexture(card[5]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "eight")
                     {
-
+                        sprite[i].setTexture(card[6]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "nine")
                     {
-
+                        sprite[i].setTexture(card[7]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "ten")
                     {
-
+                        sprite[i].setTexture(card[8]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "jack")
                     {
-
+                        sprite[i].setTexture(card[9]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "queen")
                     {
-
+                        sprite[i].setTexture(card[10]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "king")
                     {
-
+                        sprite[i].setTexture(card[11]);
+                        sprite[i].setPosition(x,470);
                     }
                     if (Player->hand[i].points == "ace")
                     {
-
+                        sprite[i].setTexture(card[12]);
+                        sprite[i].setPosition(x,470);
                     }
                 }
-            }
+
+            }*/
+
             for(int i = 0; i < Dealer->hand.size();i++)
             {
+                int x = 100*i;
                 if(Dealer->hand[i].sign == "hearts")
                 {
                     if (Dealer->hand[i].points == "two")
                     {
-
+                        sprite[i].setTexture(card[14]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "three")
                     {
-
+                        sprite[i].setTexture(card[15]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "four")
                     {
-
+                        sprite[i].setTexture(card[16]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "five")
                     {
-
+                        sprite[i].setTexture(card[17]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "six")
                     {
-
+                        sprite[i].setTexture(card[18]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "seven")
                     {
-
+                        sprite[i].setTexture(card[19]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "eight")
                     {
-
+                        sprite[i].setTexture(card[20]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "nine")
                     {
-
+                        sprite[i].setTexture(card[21]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "ten")
                     {
-
+                        sprite[i].setTexture(card[22]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "jack")
                     {
-
+                        sprite[i].setTexture(card[23]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "queen")
                     {
-
+                        sprite[i].setTexture(card[24]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "king")
                     {
-
+                        sprite[i].setTexture(card[25]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "ace")
                     {
-
+                        sprite[i].setTexture(card[26]);
+                        sprite[i].setPosition(x,600);
                     }
                 }
                 if(Dealer->hand[i].sign == "clubs")
                 {
                     if (Dealer->hand[i].points == "two")
                     {
-
+                        sprite[i].setTexture(card[27]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "three")
                     {
-
+                        sprite[i].setTexture(card[28]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "four")
                     {
-
+                        sprite[i].setTexture(card[29]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "five")
                     {
-
+                        sprite[i].setTexture(card[30]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "six")
                     {
-
+                        sprite[i].setTexture(card[31]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "seven")
                     {
-
+                        sprite[i].setTexture(card[32]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "eight")
                     {
-
+                        sprite[i].setTexture(card[33]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "nine")
                     {
-
+                        sprite[i].setTexture(card[34]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "ten")
                     {
-
+                        sprite[i].setTexture(card[35]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "jack")
                     {
-
+                        sprite[i].setTexture(card[36]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "queen")
                     {
-
+                        sprite[i].setTexture(card[37]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "king")
                     {
-
+                        sprite[i].setTexture(card[38]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "ace")
                     {
-
+                        sprite[i].setTexture(card[39]);
+                        sprite[i].setPosition(x,600);
                     }
                 }
                 if(Dealer->hand[i].sign == "diamonds")
                 {
                     if (Dealer->hand[i].points == "two")
                     {
-
+                        sprite[i].setTexture(card[40]);
+                        sprite[i].setPosition(x,4600);
                     }
                     if (Dealer->hand[i].points == "three")
                     {
-
+                        sprite[i].setTexture(card[41]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "four")
                     {
-
+                        sprite[i].setTexture(card[42]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "five")
                     {
-
+                        sprite[i].setTexture(card[43]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "six")
                     {
-
+                        sprite[i].setTexture(card[44]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "seven")
                     {
-
+                        sprite[i].setTexture(card[45]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "eight")
                     {
-
+                        sprite[i].setTexture(card[46]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "nine")
                     {
-
+                        sprite[i].setTexture(card[47]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "ten")
                     {
-
+                        sprite[i].setTexture(card[48]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "jack")
                     {
-
+                        sprite[i].setTexture(card[49]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "queen")
                     {
-
+                        sprite[i].setTexture(card[50]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "king")
                     {
-
+                        sprite[i].setTexture(card[51]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "ace")
                     {
-
+                        sprite[i].setTexture(card[52]);
+                        sprite[i].setPosition(x,600);
                     }
                 }
                 if(Dealer->hand[i].sign == "spades")
                 {
                     if (Dealer->hand[i].points == "two")
                     {
-
+                        sprite[i].setTexture(card[0]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "three")
                     {
-
+                        sprite[i].setTexture(card[1]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "four")
                     {
-
+                        sprite[i].setTexture(card[2]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "five")
                     {
-
+                        sprite[i].setTexture(card[3]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "six")
                     {
-
+                        sprite[i].setTexture(card[4]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "seven")
                     {
-
+                        sprite[i].setTexture(card[5]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "eight")
                     {
-
+                        sprite[i].setTexture(card[6]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "nine")
                     {
-
+                        sprite[i].setTexture(card[7]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "ten")
                     {
-
+                        sprite[i].setTexture(card[8]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "jack")
                     {
-
+                        sprite[i].setTexture(card[9]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "queen")
                     {
-
+                        sprite[i].setTexture(card[10]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "king")
                     {
-
+                        sprite[i].setTexture(card[11]);
+                        sprite[i].setPosition(x,600);
                     }
                     if (Dealer->hand[i].points == "ace")
                     {
-
+                        sprite[i].setTexture(card[12]);
+                        sprite[i].setPosition(x,600);
                     }
                 }
             }
         }
         window.clear();
-        window.draw(button[0]);
-        window.draw(button[1]);
-        window.draw(button[2]);
-        window.draw(button[3]);
-        window.draw(text[0]);
-        window.draw(text[1]);
-        window.draw(text[2]);
-        window.draw(text[3]);
+        for (int i=0; i < 4; i++)
+        {
+            window.draw(button[i]);
+        }
+
+        for (int i=0; i < 52; i++)
+        {
+            window.draw(sprite[i]);
+        }
+        for (int i=0; i<4; i++)
+        {
+            window.draw(text[i]);
+        }
         window.draw(sprite[53]);
         window.display();
     }
