@@ -11,6 +11,9 @@ class Blackjack :public Games{
 public:
     void start_game();
     void end_game();
+private:
+    void show_hand_Player();
+    void show_hand_Dealer();
 };
 
 

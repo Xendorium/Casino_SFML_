@@ -14,7 +14,7 @@
 
 class Players {
 public:
-    void draw(vector<Deck::card>& deck);
+    void draw(vector<Deck::card>& deck,int ilosc);
     void clear_hand();
     void show_cards();
     int sum();

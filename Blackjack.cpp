@@ -8,6 +8,10 @@
 
 using namespace std;
 
+Players *Player = new Players;
+Players *Dealer = new Players;
+
+
 void Blackjack::start_game()
 {
     //wczytanie czcionki
@@ -97,17 +101,19 @@ void Blackjack::start_game()
     sprite[53].setTexture(card[53]);
     sprite[53].setPosition(934.f,230.f);
 
+    //Ustawianie kart na ręce
+    int x = 0;
+    int y = 474;
+
+
 
     //Dobieranie kart i pokazywanie ich przez gracza
-    Players *Player = new Players;
-    Player->draw(*(deck_ptr->deck_ptr));
-    Player->draw(*(deck_ptr->deck_ptr));
-    Player->show_cards();
+    Player->draw(*(deck_ptr->deck_ptr),2);
+    show_hand_Player();
 
     //Dobranie karty i pokazanie jej przez krupiera
-    Players *Dealer = new Players;
-    Dealer->draw(*(deck_ptr->deck_ptr));
-    Dealer->show_cards();
+     Dealer->draw(*(deck_ptr->deck_ptr),1);
+     show_hand_Dealer();
 
     while (window.isOpen())
     {
@@ -115,6 +121,8 @@ void Blackjack::start_game()
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
+                Player->clear_hand();
+                Dealer->clear_hand();
                 window.close();
         }
         window.clear();
@@ -130,5 +138,12 @@ void Blackjack::end_game()
 
 }
 
+void Blackjack::show_hand_Player()
+{
+    Player->show_cards();
+}
 
-//sprite.setPosition(0.f,474.f);
+void Blackjack::show_hand_Dealer()
+{
+    Dealer->show_cards();
+}
