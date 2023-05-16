@@ -28,8 +28,8 @@ void Game_selection::show_games() {
     text[2] = Drawing().text("Spin",660,332,font);
 
    //utworzenie przycisków
-    button[0] = Drawing().draw_button(85, 312);
-    button[1] = Drawing().draw_button(515, 312);
+    button[0] = Drawing().draw_button(85, 312,400 , 100);
+    button[1] = Drawing().draw_button(515, 312,400 , 100);
 
     while (window.isOpen())
     {

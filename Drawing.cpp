@@ -19,9 +19,9 @@ sf::Text Drawing::text(std::string text, int x, int y,sf::Font& font)
 }
 
 //tworzenie przycisków
-sf::RectangleShape Drawing::draw_button(int x, int y)
+sf::RectangleShape Drawing::draw_button(int x, int y, int z, int i)
 {
-    sf::RectangleShape button(sf::Vector2f(400, 100));
+    sf::RectangleShape button(sf::Vector2f(z, i));
     button.setFillColor(sf::Color::Black);
     button.setOutlineThickness(5);
     button.setOutlineColor(sf::Color::Yellow);

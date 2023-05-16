@@ -11,7 +11,7 @@
 
 class Drawing {
 public:
-    sf::RectangleShape draw_button(int x, int y);
+    sf::RectangleShape draw_button(int x, int y, int z, int i);
     sf::Text text(std::string text, int x, int y, sf::Font& font);
 };
 

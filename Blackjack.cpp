@@ -23,15 +23,15 @@ void Blackjack::start_game()
 
     //utworzenie napisów
     sf::Text text[3];
-    text[0] = Drawing().text("Blackjack",352,30,font);
-    text[1] = Drawing().text("Hit",352,30,font);
-    text[2] = Drawing().text("Stand",352,30,font);
+    text[0] = Drawing().text("Blackjack",352,250,font);
+    text[1] = Drawing().text("Hit",65,195,font);
+    text[2] = Drawing().text("Stand",20,295,font);
 
     //yworzenie przycisków
     sf::RectangleShape button[3];
-    button[0] = Drawing().draw_button(312, 10);
-    button[1] = Drawing().draw_button(10, 200);
-    button[2] = Drawing().draw_button(10, 400);
+    button[0] = Drawing().draw_button(312, 230,400 , 100);
+    button[1] = Drawing().draw_button(10, 200,200,50);
+    button[2] = Drawing().draw_button(10, 300,200,50);
 
     std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
 
@@ -129,12 +129,25 @@ void Blackjack::start_game()
                 Dealer->clear_hands(*deck_ptr->deck_ptr);
                 window.close();
             }
+            if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+            {
+                sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+                if (button[0].getGlobalBounds().contains(mousePos))
+                {
+                    Player->clear_hands(*deck_ptr->deck_ptr);
+                    Dealer->clear_hands(*deck_ptr->deck_ptr);
+                    window.close();
+
+                }
+            }
         }
         window.clear();
         window.draw(button[0]);
         window.draw(button[1]);
         window.draw(button[2]);
         window.draw(text[0]);
+        window.draw(text[1]);
+        window.draw(text[2]);
         window.draw(sprite[53]);
         window.display();
     }
