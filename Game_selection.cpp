@@ -10,7 +10,6 @@
 
 void Game_selection::show_games() {
 
-
     //stworzenie tablicy napisów i przycisków
     sf::Text text[3];
     sf::RectangleShape button[2];

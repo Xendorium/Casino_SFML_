@@ -5,35 +5,38 @@
 #include <memory>
 #include "Blackjack.h"
 #include "Players.h"
+#include "Game_selection.h"
 
 using namespace std;
 
 Players *Player = new Players;
 Players *Dealer = new Players;
 
+std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
 
 void Blackjack::start_game()
 {
+    //utworzenie okna
+    sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
+
     //wczytanie czcionki
     sf::Font font;
     font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
 
-    //utworzenie okna
-    sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
-
     //utworzenie napisów
-    sf::Text text[3];
+    sf::Text text[4];
     text[0] = Drawing().text("Blackjack",352,250,font);
     text[1] = Drawing().text("Hit",65,195,font);
     text[2] = Drawing().text("Stand",20,295,font);
+    text[3] = Drawing().text("Menu",442,345,font);
 
     //yworzenie przycisków
-    sf::RectangleShape button[3];
+    sf::RectangleShape button[4];
     button[0] = Drawing().draw_button(312, 230,400 , 100);
     button[1] = Drawing().draw_button(10, 200,200,50);
     button[2] = Drawing().draw_button(10, 300,200,50);
+    button[3] = Drawing().draw_button(412, 350,200,50);
 
-    std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
 
     //zczytanie kart do gry
 
@@ -125,19 +128,17 @@ void Blackjack::start_game()
         {
             if (event.type == sf::Event::Closed)
             {
-                Player->clear_hands(*deck_ptr->deck_ptr);
-                Dealer->clear_hands(*deck_ptr->deck_ptr);
+                end_game();
                 window.close();
             }
             if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
             {
                 sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
-                if (button[0].getGlobalBounds().contains(mousePos))
+                if (button[3].getGlobalBounds().contains(mousePos))
                 {
-                    Player->clear_hands(*deck_ptr->deck_ptr);
-                    Dealer->clear_hands(*deck_ptr->deck_ptr);
+                    end_game();
                     window.close();
-
+                    Game_selection::show_games();
                 }
             }
         }
@@ -145,9 +146,11 @@ void Blackjack::start_game()
         window.draw(button[0]);
         window.draw(button[1]);
         window.draw(button[2]);
+        window.draw(button[3]);
         window.draw(text[0]);
         window.draw(text[1]);
         window.draw(text[2]);
+        window.draw(text[3]);
         window.draw(sprite[53]);
         window.display();
     }
@@ -155,15 +158,26 @@ void Blackjack::start_game()
 
 void Blackjack::end_game()
 {
-
+    Player->clear_hands(*deck_ptr->deck_ptr);
+    Dealer->clear_hands(*deck_ptr->deck_ptr);
 }
 
 void Blackjack::show_hand_Player()
 {
-    Player->show_cards();
+    for (int i = 0; i < Player->hand.size(); i++)
+    {
+        cout << Player->hand[i].sign << endl;
+        cout << Player->hand[i].points << endl;
+        cout << Player->hand[i].points_BJ << endl;
+    }
 }
 
 void Blackjack::show_hand_Dealer()
 {
-    Dealer->show_cards();
+    for (int i = 0; i < Dealer->hand.size(); i++)
+    {
+        cout << Dealer->hand[i].sign << endl;
+        cout << Dealer->hand[i].points << endl;
+        cout << Dealer->hand[i].points_BJ << endl;
+    }
 }
