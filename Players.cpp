@@ -42,18 +42,6 @@ void Players::draw(vector<Deck::card>& deck,int ilosc)
 
 }
 
-//funkcja pokazująca karty
-/*void Players::show_cards()
-{
-    for (int i = 0; i < hand.size(); i++)
-    {
-        cout << hand[i].sign << endl;
-        cout << hand[i].points << endl;
-        cout << hand[i].points_BJ << endl;
-    }
-    cout << "Suma twoich kart " << sum() << endl;
-}*/
-
 //funkcja sumujaca punkty do Blackjacka
 int Players::sum()
 {   int sum;
