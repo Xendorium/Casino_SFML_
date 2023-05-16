@@ -67,8 +67,13 @@ void Players::clear_hands(vector<Deck::card>& deck)
 //funkcja losująca liczbe
 int Players::random_number()
 {
-    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
-    mt19937 gen(seed);
-    uniform_int_distribution<int> dist(0, 51 - P_and_D_hand.size());
-    return dist(gen);
+    int j;
+    do {
+        unsigned seed = chrono::system_clock::now().time_since_epoch().count();
+        mt19937 gen(seed);
+        uniform_int_distribution<int> dist(0, 51 - P_and_D_hand.size());
+        j = dist(gen);
+        cout << j << endl;
+        }while (j>=51-P_and_D_hand.size()||j<0);
+    return j;
 }

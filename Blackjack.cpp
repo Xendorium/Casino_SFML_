@@ -145,6 +145,7 @@ void Blackjack::start_game()
                 {
                     Player->draw(*(deck_ptr->deck_ptr),1);
                 }
+
             }
             for(int i = 0; i < Player->hand.size();i++)
             {
