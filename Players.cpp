@@ -23,9 +23,12 @@ void Players::draw(vector<Deck::card>& deck,int ilosc)
        } while (j==i);
        Deck::card C1 = deck[j];
        hand.push_back(C1);
+       P_and_D_hand.push_back(C1);
        deck.erase(deck.begin()+j);
+
        Deck::card C2 = deck[i];
        hand.push_back(C2);
+       P_and_D_hand.push_back(C2);
        deck.erase(deck.begin()+i);
    }
    if (ilosc == 1)
@@ -33,12 +36,12 @@ void Players::draw(vector<Deck::card>& deck,int ilosc)
        j = random_number();
        Deck::card C1 = deck[j];
        hand.push_back(C1);
+       P_and_D_hand.push_back(C1);
        deck.erase(deck.begin()+j);
    }
 
-
-
 }
+
 //funkcja pokazująca karty
 void Players::show_cards()
 {
@@ -61,9 +64,16 @@ int Players::sum()
     return sum;
 }
 
-void Players::clear_hand()
+//funkcja czyszczaca rece graczy
+void Players::clear_hands(vector<Deck::card>& deck)
 {
+    for (int i = 0; i < P_and_D_hand.size(); i++)
+    {
+        Deck::card C1 = {P_and_D_hand[i].points,P_and_D_hand[i].sign, P_and_D_hand[i].points_BJ};
+        deck.push_back(C1);
+    }
     hand.clear();
+    P_and_D_hand.clear();
 }
 
 //funkcja losująca liczbe
@@ -71,6 +81,6 @@ int Players::random_number()
 {
     unsigned seed = chrono::system_clock::now().time_since_epoch().count();
     mt19937 gen(seed);
-    uniform_int_distribution<int> dist(0, 51 - hand.size());
+    uniform_int_distribution<int> dist(0, 51 - P_and_D_hand.size());
     return dist(gen);
 }

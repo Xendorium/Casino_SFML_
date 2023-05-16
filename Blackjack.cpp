@@ -21,12 +21,17 @@ void Blackjack::start_game()
     //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
-    //utworzenie napisu
-    sf::Text text;
-    text = Drawing().text("Blackjack",352,30,font);
+    //utworzenie napisów
+    sf::Text text[3];
+    text[0] = Drawing().text("Blackjack",352,30,font);
+    text[1] = Drawing().text("Hit",352,30,font);
+    text[2] = Drawing().text("Stand",352,30,font);
 
-    sf::RectangleShape button;
-    button = Drawing().draw_button(312, 10);
+    //yworzenie przycisków
+    sf::RectangleShape button[3];
+    button[0] = Drawing().draw_button(312, 10);
+    button[1] = Drawing().draw_button(10, 200);
+    button[2] = Drawing().draw_button(10, 400);
 
     std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
 
@@ -105,8 +110,6 @@ void Blackjack::start_game()
     int x = 0;
     int y = 474;
 
-
-
     //Dobieranie kart i pokazywanie ich przez gracza
     Player->draw(*(deck_ptr->deck_ptr),2);
     show_hand_Player();
@@ -121,13 +124,17 @@ void Blackjack::start_game()
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
-                Player->clear_hand();
-                Dealer->clear_hand();
+            {
+                Player->clear_hands(*deck_ptr->deck_ptr);
+                Dealer->clear_hands(*deck_ptr->deck_ptr);
                 window.close();
+            }
         }
         window.clear();
-        window.draw(button);
-        window.draw(text);
+        window.draw(button[0]);
+        window.draw(button[1]);
+        window.draw(button[2]);
+        window.draw(text[0]);
         window.draw(sprite[53]);
         window.display();
     }
