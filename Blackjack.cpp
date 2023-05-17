@@ -160,12 +160,12 @@ void Blackjack::start_game()
                 }
                 while (button[0].getGlobalBounds().contains(mousePos))
                 {
-                    while (Dealer->sum() < Player->sum() && Dealer->sum()<21)
+                    while ((Dealer->sum() < Player->sum()) /*&& (Dealer->sum()<21)*/)
                     {
                         //wait(1);
                         Dealer->draw(*(deck_ptr->deck_ptr),1);
                     }
-                       break;
+                    break;
                 }
             }
             for(int i = 0; i < Player->hand.size();i++)
@@ -753,14 +753,16 @@ void Blackjack::start_game()
         }
 
         //przegrana gracza
-        if(Player->sum()>21||Dealer->sum()>=Player->sum()&&Dealer->sum()<=21)
+        if(Player->sum()>21||Dealer->sum()>Player->sum()&&Dealer->sum()<=21)
         {
+            end_game();
             wait(1);
             window.draw(spriteL);
-            window.draw(button[1]);
-            window.draw(text[1]);
+            window.display();
+            wait(2);
+            window.close();
+            Game_selection::show_games();
         }
-
         window.display();
     }
 }
