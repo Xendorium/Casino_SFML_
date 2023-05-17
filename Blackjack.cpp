@@ -40,13 +40,13 @@ void Blackjack::start_game()
     sf::Text text[3];
     text[0] = Drawing().text("Stand",20,295,font);
     text[1] = Drawing().text("Menu",40,195,font);
-    text[2] = Drawing().text("Zasady",805,380,font);
+    text[2] = Drawing().text("Zasady",805,390,font);
 
     //tworzenie przycisków
     sf::RectangleShape button[3];
     button[0] = Drawing().draw_button(10, 300,200,50);
     button[1] = Drawing().draw_button(10, 200,200,50);
-    button[2] = Drawing().draw_button(800, 380, 210,60);
+    button[2] = Drawing().draw_button(800, 390, 210,60);
 
     //zczytanie kart do gry
 
@@ -1124,11 +1124,11 @@ void Blackjack::rules()
 
     //utworzenie napisów
     sf::Text text;
-    text = Drawing().text("GRAJ",430,445,font);
+    text = Drawing().text("GRAJ",430,465,font);
 
     //tworzenie przycisków
     sf::RectangleShape button;
-    button = Drawing().draw_button(398, 450,200,50);
+    button = Drawing().draw_button(398, 470,200,50);
 
     while (window.isOpen())
     {
