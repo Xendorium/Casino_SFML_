@@ -132,12 +132,8 @@ void Blackjack::start_game()
     //Dobieranie kart i pokazywanie ich przez gracza
     Player->draw(*(deck_ptr->deck_ptr),2);
 
-    /////////////////////// Funkcja do sprawdzania kart jak sie psuć zacznie show_hand_Player();
-
     //Dobranie karty i pokazanie jej przez krupiera
      Dealer->draw(*(deck_ptr->deck_ptr),1);
-
-    //////////////////// Funkcja do sprawdzania kart jak sie psuć zacznie show_hand_Dealer();
 
     //rysowanie kart Dealera
     for(int i = 0; i < Dealer->hand.size();i++)
@@ -755,7 +751,31 @@ void Blackjack::start_game()
                             Game_selection::show_games();
                             break;
                         }
-                    }while(Dealer->sum()<21);
+                    }while(Dealer->sum()<17);
+                    if (Dealer->sum()>Player->sum())
+                    {
+                        window.clear();
+                        end_game();
+                        wait(2);
+                        window.draw(spriteLW[0]);
+                        window.display();
+                        wait(2);
+                        window.close();
+                        Game_selection::show_games();
+                        break;
+                    }
+                    if (Player->sum()>Dealer->sum())
+                    {
+                        window.clear();
+                        end_game();
+                        wait(2);
+                        window.draw(spriteLW[1]);
+                        window.display();
+                        wait(2);
+                        window.close();
+                        Game_selection::show_games();
+                        break;
+                    }
                 }
             }
         }
@@ -1140,23 +1160,3 @@ void Blackjack::wait(int seconds)
     endwait = clock () + seconds * CLOCKS_PER_SEC ;
     while (clock() < endwait) {}
 }
-
-/*void Blackjack::show_hand_Player()
-{
-    for (int i = 0; i < Player->hand.size(); i++)
-    {
-        cout << Player->hand[i].sign << endl;
-        cout << Player->hand[i].points << endl;
-        cout << Player->hand[i].points_BJ << endl;
-    }
-}*/
-
-/*void Blackjack::show_hand_Dealer()
-{
-    for (int i = 0; i < Dealer->hand.size(); i++)
-    {
-        cout << Dealer->hand[i].sign << endl;
-        cout << Dealer->hand[i].points << endl;
-        cout << Dealer->hand[i].points_BJ << endl;
-    }
-}*/
