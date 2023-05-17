@@ -158,13 +158,54 @@ void Blackjack::start_game()
                 {
                     Player->draw(*(deck_ptr->deck_ptr),1);
                 }
-                while (button[0].getGlobalBounds().contains(mousePos))
+                if  (button[0].getGlobalBounds().contains(mousePos))
                 {
-                    wait(1);
-                    Dealer->draw(*(deck_ptr->deck_ptr),1);
-                    if ((Dealer->sum() > Player->sum())&&(Dealer->sum()<21)||Dealer->sum()>21)
+                    while (Dealer->sum()<21&&Dealer->sum()<Player->sum())
                     {
-                        break;
+                        Dealer->draw(*(deck_ptr->deck_ptr),1);
+                        wait(1);
+                        for (int i=0; i < Dealer->hand.size(); i++)
+                        {
+                            window.draw(Sprite[i]);
+                        }
+                        window.display();
+                    }
+                    if (Dealer->sum() >= Player->sum())
+                    {
+                        cout << endl;
+                        cout << "Przegrales " << endl << endl;
+                        end_game();
+                        wait(2);
+                        window.draw(spriteL);
+                        window.display();
+                        wait(2);
+                        window.close();
+                        Game_selection::show_games();
+                    }
+                    if(Dealer->sum() > 21)
+                    {
+                        cout << endl;
+                        cout << "Wygrales " << endl << endl;
+                        end_game();
+                        wait(2);
+                        window.draw(spriteL);
+                        window.display();
+                        wait(2);
+                        window.close();
+                        Game_selection::show_games();
+                    }
+
+                    else if (Player->sum() > Dealer->sum())
+                    {
+                        cout << endl;
+                        cout << "Wygrales " << endl << endl;
+                        end_game();
+                        wait(2);
+                        window.draw(spriteL);
+                        window.display();
+                        wait(2);
+                        window.close();
+                        Game_selection::show_games();
                     }
                 }
             }
@@ -733,18 +774,17 @@ void Blackjack::start_game()
         }
 
         //rysowanie kart Gracza
-        for (int i=0; i < 54; i++)
+        for (int i=0; i < Player->hand.size(); i++)
         {
             window.draw(sprite[i]);
         }
 
+        //rysowanie rewersów
+        window.draw(sprite[53]);
         window.draw(Sprite[53]);
 
-        //rysowanie kart Dealera
-        for (int i=0; i < 53; i++)
-        {
-            window.draw(Sprite[i]);
-        }
+        //rysowanie pierwszej karty Dealera
+         window.draw(Sprite[0]);
 
         //rysowanie tekstu
         for (int i=0; i<3; i++)
@@ -755,7 +795,7 @@ void Blackjack::start_game()
         window.display();
 
         //przegrana gracza
-        if(Player->sum()>21||Dealer->sum()>Player->sum()&&Dealer->sum()<=21)
+        if(Player->sum()>21)
         {
             end_game();
             wait(2);
