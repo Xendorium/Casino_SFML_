@@ -7,39 +7,40 @@
 #include <random>
 #include <vector>
 #include <chrono>
+#include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
 //funkcja dobierająca karte
 void Players::draw(vector<Deck::card>& deck,int ilosc)
 {
-    int j,i;
-   if (ilosc == 2)
-   {
-       do
-       {
-           j = random_number();
-           i = random_number();
-       } while (j==i);
-       Deck::card C1 = deck[j];
-       hand.push_back(C1);
-       P_and_D_hand.push_back(C1);
-       deck.erase(deck.begin()+j);
+    int j,i,k;
+    if (ilosc == 2)
+    {
+        do
+        {
+            j = random_number();
+            i = random_number();
+        } while (j==i);
+        Deck::card C1 = deck[j];
+        hand.push_back(C1);
+        P_and_D_hand.push_back(C1);
+        deck.erase(deck.begin()+j);
 
-       Deck::card C2 = deck[i];
-       hand.push_back(C2);
-       P_and_D_hand.push_back(C2);
-       deck.erase(deck.begin()+i);
-   }
-   if (ilosc == 1)
-   {
-       j = random_number();
-       Deck::card C1 = deck[j];
-       hand.push_back(C1);
-       P_and_D_hand.push_back(C1);
-       deck.erase(deck.begin()+j);
-   }
-
+        Deck::card C2 = deck[i];
+        hand.push_back(C2);
+        P_and_D_hand.push_back(C2);
+        deck.erase(deck.begin()+i);
+    }
+    if (ilosc == 1)
+    {
+       k = (rand()%(51-P_and_D_hand.size()));
+       Deck::card C3 = deck[k];
+       hand.push_back(C3);
+       P_and_D_hand.push_back(C3);
+       deck.erase(deck.begin()+k);
+    }
 }
 
 //funkcja sumujaca punkty do Blackjacka
