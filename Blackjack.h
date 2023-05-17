@@ -14,6 +14,7 @@ public:
 private:
     void show_hand_Player();
     void show_hand_Dealer();
+    void rules();
 };
 
 

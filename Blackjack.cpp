@@ -2,6 +2,7 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+#include <windows.h>
 #include <memory>
 #include "Blackjack.h"
 #include "Players.h"
@@ -16,27 +17,31 @@ std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
 
 void Blackjack::start_game()
 {
+
     //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
+
+    //utworzenie okna Lose
+    sf::Texture Lose;
+    Lose.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/LOSE.png");
+    sf::Sprite spriteL;
+    spriteL.setTexture(Lose);
 
     //wczytanie czcionki
     sf::Font font;
     font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
 
     //utworzenie napisów
-    sf::Text text[4];
-    text[0] = Drawing().text("Blackjack",352,250,font);
-    text[1] = Drawing().text("Hit",65,195,font);
-    text[2] = Drawing().text("Stand",20,295,font);
-    text[3] = Drawing().text("Menu",442,345,font);
+    sf::Text text[3];
+    text[0] = Drawing().text("Stand",20,295,font);
+    text[1] = Drawing().text("Menu",40,195,font);
+    text[2] = Drawing().text("Zasady",805,380,font);
 
-    //yworzenie przycisków
-    sf::RectangleShape button[4];
-    button[0] = Drawing().draw_button(312, 230,400 , 100);
+    //tworzenie przycisków
+    sf::RectangleShape button[3];
+    button[0] = Drawing().draw_button(10, 300,200,50);
     button[1] = Drawing().draw_button(10, 200,200,50);
-    button[2] = Drawing().draw_button(10, 300,200,50);
-    button[3] = Drawing().draw_button(412, 350,200,50);
-
+    button[2] = Drawing().draw_button(800, 380, 210,60);
 
     //zczytanie kart do gry
 
@@ -109,10 +114,12 @@ void Blackjack::start_game()
      card[53].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/rewers.jpg");
 
     sprite[53].setTexture(card[53]);
-    sprite[53].setPosition(934.f,230.f);
+    sprite[53].setPosition(870.f,230.f);
 
     //tablica kart dla Dealera
-    sf::Sprite Sprite[53];
+    sf::Sprite Sprite[54];
+    Sprite[53].setTexture(card[53]);
+    Sprite[53].setPosition(115.f,0.f);
 
     //Dobieranie kart i pokazywanie ich przez gracza
     Player->draw(*(deck_ptr->deck_ptr),2);
@@ -135,17 +142,25 @@ void Blackjack::start_game()
             if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
             {
                 sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
-                if (button[3].getGlobalBounds().contains(mousePos))
+                if (button[1].getGlobalBounds().contains(mousePos))
                 {
                     end_game();
                     window.close();
                     Game_selection::show_games();
                 }
-                if (button[1].getGlobalBounds().contains(mousePos))
+                if (button[2].getGlobalBounds().contains(mousePos))
+                {
+                    rules();
+                }
+                if (sprite[53].getGlobalBounds().contains(mousePos))
                 {
                     Player->draw(*(deck_ptr->deck_ptr),1);
-                }
 
+                }
+                if (button[0].getGlobalBounds().contains(mousePos))
+                {
+                    //rules();
+                }
             }
             for(int i = 0; i < Player->hand.size();i++)
             {
@@ -706,7 +721,7 @@ void Blackjack::start_game()
         window.clear();
 
         //rysowanie przycisków
-        for (int i=0; i < 4; i++)
+        for (int i=0; i < 3; i++)
         {
             window.draw(button[i]);
         }
@@ -724,11 +739,16 @@ void Blackjack::start_game()
         }
 
         //rysowanie tekstu
-        for (int i=0; i<4; i++)
+        for (int i=0; i<3; i++)
         {
             window.draw(text[i]);
         }
-
+        if(Player->sum()>21||Dealer->sum()>Player->sum()&&Dealer->sum()<=21)
+        {
+            window.draw(spriteL);
+            window.draw(button[1]);
+            window.draw(text[1]);
+        }
         window.display();
     }
 }
@@ -757,4 +777,51 @@ void Blackjack::show_hand_Dealer()
         cout << Dealer->hand[i].points << endl;
         cout << Dealer->hand[i].points_BJ << endl;
     }
+}
+
+void Blackjack::rules()
+{
+    //utworzenie okna
+    sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
+
+    //wczytanie czcionki
+    sf::Font font;
+    font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
+
+    //załadowanie zasad
+    sf::Texture menu;
+    menu.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/zasady.png");
+    sf::Sprite sprite;
+    sprite.setTexture(menu);
+
+    //utworzenie napisów
+    sf::Text text;
+    text = Drawing().text("GRAJ",430,445,font);
+
+    //tworzenie przycisków
+    sf::RectangleShape button;
+    button = Drawing().draw_button(398, 450,200,50);
+
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+            if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+            {
+                sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+                if (button.getGlobalBounds().contains(mousePos)) {
+                    window.close();
+                }
+            }
+            window.clear();
+            window.draw(sprite);
+            window.draw(button);
+            window.draw(text);
+            window.display();
+        }
+    }
+
 }

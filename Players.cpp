@@ -77,3 +77,4 @@ int Players::random_number()
         }while (j>=51-P_and_D_hand.size()||j<0);
     return j;
 }
+
