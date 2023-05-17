@@ -2,7 +2,7 @@
 // Created by Konkuker on 15.05.2023.
 //
 
-#include <windows.h>
+#include <time.h>
 #include <memory>
 #include "Blackjack.h"
 #include "Players.h"
@@ -123,11 +123,13 @@ void Blackjack::start_game()
 
     //Dobieranie kart i pokazywanie ich przez gracza
     Player->draw(*(deck_ptr->deck_ptr),2);
-    show_hand_Player();
+
+    /////////////////////// Funkcja do sprawdzania kart jak sie psuć zacznie show_hand_Player();
 
     //Dobranie karty i pokazanie jej przez krupiera
      Dealer->draw(*(deck_ptr->deck_ptr),1);
-     show_hand_Dealer();
+
+    //////////////////// Funkcja do sprawdzania kart jak sie psuć zacznie show_hand_Dealer();
 
     while (window.isOpen())
     {
@@ -155,11 +157,15 @@ void Blackjack::start_game()
                 if (sprite[53].getGlobalBounds().contains(mousePos))
                 {
                     Player->draw(*(deck_ptr->deck_ptr),1);
-
                 }
-                if (button[0].getGlobalBounds().contains(mousePos))
+                while (button[0].getGlobalBounds().contains(mousePos))
                 {
-                    //rules();
+                    while (Dealer->sum() < Player->sum() && Dealer->sum()<21)
+                    {
+                        //wait(1);
+                        Dealer->draw(*(deck_ptr->deck_ptr),1);
+                    }
+                       break;
                 }
             }
             for(int i = 0; i < Player->hand.size();i++)
@@ -732,8 +738,10 @@ void Blackjack::start_game()
             window.draw(sprite[i]);
         }
 
+        window.draw(Sprite[53]);
+
         //rysowanie kart Dealera
-        for (int i=0; i < 54; i++)
+        for (int i=0; i < 53; i++)
         {
             window.draw(Sprite[i]);
         }
@@ -743,12 +751,16 @@ void Blackjack::start_game()
         {
             window.draw(text[i]);
         }
-        if(Player->sum()>21||Dealer->sum()>Player->sum()&&Dealer->sum()<=21)
+
+        //przegrana gracza
+        if(Player->sum()>21||Dealer->sum()>=Player->sum()&&Dealer->sum()<=21)
         {
+            wait(1);
             window.draw(spriteL);
             window.draw(button[1]);
             window.draw(text[1]);
         }
+
         window.display();
     }
 }
@@ -757,26 +769,6 @@ void Blackjack::end_game()
 {
     Player->clear_hands(*deck_ptr->deck_ptr);
     Dealer->clear_hands(*deck_ptr->deck_ptr);
-}
-
-void Blackjack::show_hand_Player()
-{
-    for (int i = 0; i < Player->hand.size(); i++)
-    {
-        cout << Player->hand[i].sign << endl;
-        cout << Player->hand[i].points << endl;
-        cout << Player->hand[i].points_BJ << endl;
-    }
-}
-
-void Blackjack::show_hand_Dealer()
-{
-    for (int i = 0; i < Dealer->hand.size(); i++)
-    {
-        cout << Dealer->hand[i].sign << endl;
-        cout << Dealer->hand[i].points << endl;
-        cout << Dealer->hand[i].points_BJ << endl;
-    }
 }
 
 void Blackjack::rules()
@@ -825,3 +817,30 @@ void Blackjack::rules()
     }
 
 }
+
+void Blackjack::wait(int seconds)
+{
+    clock_t endwait;
+    endwait = clock () + seconds * CLOCKS_PER_SEC ;
+    while (clock() < endwait) {}
+}
+
+/*void Blackjack::show_hand_Player()
+{
+    for (int i = 0; i < Player->hand.size(); i++)
+    {
+        cout << Player->hand[i].sign << endl;
+        cout << Player->hand[i].points << endl;
+        cout << Player->hand[i].points_BJ << endl;
+    }
+}*/
+
+/*void Blackjack::show_hand_Dealer()
+{
+    for (int i = 0; i < Dealer->hand.size(); i++)
+    {
+        cout << Dealer->hand[i].sign << endl;
+        cout << Dealer->hand[i].points << endl;
+        cout << Dealer->hand[i].points_BJ << endl;
+    }
+}*/

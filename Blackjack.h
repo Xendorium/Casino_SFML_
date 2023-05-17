@@ -12,9 +12,10 @@ public:
     void start_game();
     void end_game();
 private:
-    void show_hand_Player();
-    void show_hand_Dealer();
     void rules();
+    void wait(int seconds);
+    // Funkcja do sprawdzania kart void show_hand_Player();
+    // Funkcja do sprawdzania kart  void show_hand_Dealer();
 };
 
 
