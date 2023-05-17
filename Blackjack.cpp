@@ -1059,7 +1059,6 @@ void Blackjack::start_game()
             }
 
         window.clear();
-
         //rysowanie przycisków
         for (int i=0; i < 3; i++)
         {

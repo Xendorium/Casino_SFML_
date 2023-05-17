@@ -50,6 +50,7 @@ int Players::sum()
     for(int i = 0; i < hand.size(); i++)
     {
        sum = sum + hand[i].points_BJ;
+
     }
     return sum;
 }
