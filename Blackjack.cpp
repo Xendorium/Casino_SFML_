@@ -752,6 +752,8 @@ void Blackjack::start_game()
             window.draw(text[i]);
         }
 
+        window.display();
+
         //przegrana gracza
         if(Player->sum()>21||Dealer->sum()>Player->sum()&&Dealer->sum()<=21)
         {
@@ -763,7 +765,7 @@ void Blackjack::start_game()
             window.close();
             Game_selection::show_games();
         }
-        window.display();
+
     }
 }
 
