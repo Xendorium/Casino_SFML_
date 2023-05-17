@@ -45,7 +45,8 @@ void Players::draw(vector<Deck::card>& deck,int ilosc)
 
 //funkcja sumujaca punkty do Blackjacka
 int Players::sum()
-{   int sum;
+{
+    int sum=0;
     for(int i = 0; i < hand.size(); i++)
     {
        sum = sum + hand[i].points_BJ;
