@@ -17,8 +17,6 @@ std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
 
 void Blackjack::start_game()
 {
-    srand( time( NULL ) );
-
     //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino 100");
 
@@ -734,7 +732,7 @@ void Blackjack::start_game()
                             wait(2);
                             window.draw(spriteLW[1]);
                             window.display();
-                            wait(2);
+                            wait(1);
                             window.close();
                             Game_selection::show_games();
                             break;
@@ -746,7 +744,7 @@ void Blackjack::start_game()
                             wait(2);
                             window.draw(spriteLW[0]);
                             window.display();
-                            wait(2);
+                            wait(1);
                             window.close();
                             Game_selection::show_games();
                             break;
@@ -759,7 +757,7 @@ void Blackjack::start_game()
                         wait(2);
                         window.draw(spriteLW[0]);
                         window.display();
-                        wait(2);
+                        wait(1);
                         window.close();
                         Game_selection::show_games();
                         break;
@@ -1093,7 +1091,7 @@ void Blackjack::start_game()
             wait(2);
             window.draw(spriteLW[0]);
             window.display();
-            wait(2);
+            wait(1);
             window.close();
             Game_selection::show_games();
         }

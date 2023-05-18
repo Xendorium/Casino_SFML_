@@ -10,6 +10,8 @@ using namespace std;
 
 int main()
 {
+    srand( time( NULL ) );
+
     //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 

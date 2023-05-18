@@ -35,7 +35,7 @@ void Players::draw(vector<Deck::card>& deck,int ilosc)
     }
     if (ilosc == 1)
     {
-       k = (rand()%(51-P_and_D_hand.size()));
+       k = (rand()%(51-P_and_D_hand.size())+0);
        Deck::card C3 = deck[k];
        hand.push_back(C3);
        P_and_D_hand.push_back(C3);
