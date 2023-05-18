@@ -22,7 +22,7 @@ void Blackjack::start_game()
 
     //załadowanie grfiki tlo
     sf::Texture tlo;
-    tlo.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/BJ.jpg");
+    tlo.loadFromFile("grafiki jpg/BJ.jpg");
     sf::Sprite spriteT;
     spriteT.setTexture(tlo);
 
@@ -30,15 +30,15 @@ void Blackjack::start_game()
     sf::Texture LW[2];
     sf::Sprite spriteLW[2];
 
-    LW[0].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/LOSE.png");
-    LW[1].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/WIN.png");
+    LW[0].loadFromFile("grafiki jpg/LOSE.png");
+    LW[1].loadFromFile("grafiki jpg/WIN.png");
 
     spriteLW[0].setTexture(LW[0]);
     spriteLW[1].setTexture(LW[1]);
 
     //wczytanie czcionki
     sf::Font font;
-    font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
+    font.loadFromFile("czcionka/NEON____.ttf");
 
     //utworzenie napisów
     sf::Text text[3];
@@ -56,71 +56,71 @@ void Blackjack::start_game()
 
     //PIKI
     sf::Texture card[54];
-    card[0].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/2P.jpg");
-    card[1].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/3P.jpg");
-    card[2].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/4P.jpg");
-    card[3].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/5P.jpg");
-    card[4].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/6P.jpg");
-    card[5].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/7P.jpg");
-    card[6].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/8P.jpg");
-    card[7].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/9P.jpg");
-    card[8].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/10P.jpg");
-    card[9].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/JP.jpg");
-    card[10].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/DP.jpg");
-    card[11].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/KP.jpg");
-    card[12].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/AP.jpg");
-    card[13].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/rewers.jpg");
+    card[0].loadFromFile("grafiki jpg/piki/2P.jpg");
+    card[1].loadFromFile("grafiki jpg/piki/3P.jpg");
+    card[2].loadFromFile("grafiki jpg/piki/4P.jpg");
+    card[3].loadFromFile("grafiki jpg/piki/5P.jpg");
+    card[4].loadFromFile("grafiki jpg/piki/6P.jpg");
+    card[5].loadFromFile("grafiki jpg/piki/7P.jpg");
+    card[6].loadFromFile("grafiki jpg/piki/8P.jpg");
+    card[7].loadFromFile("grafiki jpg/piki/9P.jpg");
+    card[8].loadFromFile("grafiki jpg/piki/10P.jpg");
+    card[9].loadFromFile("grafiki jpg/piki/JP.jpg");
+    card[10].loadFromFile("grafiki jpg/piki/DP.jpg");
+    card[11].loadFromFile("grafiki jpg/piki/KP.jpg");
+    card[12].loadFromFile("grafiki jpg/piki/AP.jpg");
+    card[13].loadFromFile("grafiki jpg/piki/rewers.jpg");
 
      //SERCA
-    card[14].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/2S.jpg");
-    card[15].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/3S.jpg");
-    card[16].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/4S.jpg");
-    card[17].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/5S.jpg");
-    card[18].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/6S.jpg");
-    card[19].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/7S.jpg");
-    card[20].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/8S.jpg");
-    card[21].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/9S.jpg");
-    card[22].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/10S.jpg");
-    card[23].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/JS.jpg");
-    card[24].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/DS.jpg");
-    card[25].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/KS.jpg");
-    card[26].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/serca/AS.jpg");
+    card[14].loadFromFile("grafiki jpg/serca/2S.jpg");
+    card[15].loadFromFile("grafiki jpg/serca/3S.jpg");
+    card[16].loadFromFile("grafiki jpg/serca/4S.jpg");
+    card[17].loadFromFile("grafiki jpg/serca/5S.jpg");
+    card[18].loadFromFile("grafiki jpg/serca/6S.jpg");
+    card[19].loadFromFile("grafiki jpg/serca/7S.jpg");
+    card[20].loadFromFile("grafiki jpg/serca/8S.jpg");
+    card[21].loadFromFile("grafiki jpg/serca/9S.jpg");
+    card[22].loadFromFile("grafiki jpg/serca/10S.jpg");
+    card[23].loadFromFile("grafiki jpg/serca/JS.jpg");
+    card[24].loadFromFile("grafiki jpg/serca/DS.jpg");
+    card[25].loadFromFile("grafiki jpg/serca/KS.jpg");
+    card[26].loadFromFile("grafiki jpg/serca/AS.jpg");
 
      //TREFL
-    card[27].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/2T.jpg");
-    card[28].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/3T.jpg");
-    card[29].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/4T.jpg");
-    card[30].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/5T.jpg");
-    card[31].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/6T.jpg");
-    card[32].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/7T.jpg");
-    card[33].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/8T.jpg");
-    card[34].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/9T.jpg");
-    card[35].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/10T.jpg");
-    card[36].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/JT.jpg");
-    card[37].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/DT.jpg");
-    card[38].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/KT.jpg");
-    card[39].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/trefl/AT.jpg");
+    card[27].loadFromFile("grafiki jpg/trefl/2T.jpg");
+    card[28].loadFromFile("grafiki jpg/trefl/3T.jpg");
+    card[29].loadFromFile("grafiki jpg/trefl/4T.jpg");
+    card[30].loadFromFile("grafiki jpg/trefl/5T.jpg");
+    card[31].loadFromFile("grafiki jpg/trefl/6T.jpg");
+    card[32].loadFromFile("grafiki jpg/trefl/7T.jpg");
+    card[33].loadFromFile("grafiki jpg/trefl/8T.jpg");
+    card[34].loadFromFile("grafiki jpg/trefl/9T.jpg");
+    card[35].loadFromFile("grafiki jpg/trefl/10T.jpg");
+    card[36].loadFromFile("grafiki jpg/trefl/JT.jpg");
+    card[37].loadFromFile("grafiki jpg/trefl/DT.jpg");
+    card[38].loadFromFile("grafiki jpg/trefl/KT.jpg");
+    card[39].loadFromFile("grafiki jpg/trefl/AT.jpg");
 
      //KARO
-    card[40].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/2K.jpg");
-    card[41].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/3K.jpg");
-    card[42].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/4K.jpg");
-    card[43].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/5K.jpg");
-    card[44].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/6K.jpg");
-    card[45].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/7K.jpg");
-    card[46].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/8K.jpg");
-    card[47].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/9K.jpg");
-    card[48].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/10K.jpg");
-    card[49].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/JK.jpg");
-    card[50].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/DK.jpg");
-    card[51].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/KK.jpg");
-    card[52].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/karo/AK.jpg");
+    card[40].loadFromFile("grafiki jpg/karo/2K.jpg");
+    card[41].loadFromFile("grafiki jpg/karo/3K.jpg");
+    card[42].loadFromFile("grafiki jpg/karo/4K.jpg");
+    card[43].loadFromFile("grafiki jpg/karo/5K.jpg");
+    card[44].loadFromFile("grafiki jpg/karo/6K.jpg");
+    card[45].loadFromFile("grafiki jpg/karo/7K.jpg");
+    card[46].loadFromFile("grafiki jpg/karo/8K.jpg");
+    card[47].loadFromFile("grafiki jpg/karo/9K.jpg");
+    card[48].loadFromFile("grafiki jpg/karo/10K.jpg");
+    card[49].loadFromFile("grafiki jpg/karo/JK.jpg");
+    card[50].loadFromFile("grafiki jpg/karo/DK.jpg");
+    card[51].loadFromFile("grafiki jpg/karo/KK.jpg");
+    card[52].loadFromFile("grafiki jpg/karo/AK.jpg");
 
     //tablica kart dla gracza
     sf::Sprite sprite[54];
 
      //REWERS
-     card[53].loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/piki/rewers.jpg");
+     card[53].loadFromFile("grafiki jpg/piki/rewers.jpg");
 
     sprite[53].setTexture(card[53]);
     sprite[53].setPosition(870.f,230.f);
@@ -1118,11 +1118,11 @@ void Blackjack::rules()
 
     //wczytanie czcionki
     sf::Font font;
-    font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
+    font.loadFromFile("czcionka/NEON____.ttf");
 
     //załadowanie zasad
     sf::Texture menu;
-    menu.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/zasady.png");
+    menu.loadFromFile("grafiki jpg/zasady.png");
     sf::Sprite sprite;
     sprite.setTexture(menu);
 

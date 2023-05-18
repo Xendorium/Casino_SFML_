@@ -19,13 +19,13 @@ void Game_selection::show_games() {
 
     //załadowanie grfiki tlo
     sf::Texture tlo;
-    tlo.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/tlo.png");
+    tlo.loadFromFile("grafiki jpg/tlo.png");
     sf::Sprite spriteT;
     spriteT.setTexture(tlo);
 
     //wczytanie czcionki
     sf::Font font;
-    font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
+    font.loadFromFile("czcionka/NEON____.ttf");
 
     //tworzenie napisów
     text[0] = Drawing().text("Wybeirz gre",330,150,font);
