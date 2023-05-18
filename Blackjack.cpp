@@ -18,7 +18,7 @@ std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
 void Blackjack::start_game()
 {
     //utworzenie okna
-    sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino 100");
+    sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
     //utworzenie okna Lose i WIN
     sf::Texture LW[2];
