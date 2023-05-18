@@ -1123,11 +1123,11 @@ void Blackjack::rules()
 
     //utworzenie napisów
     sf::Text text;
-    text = Drawing().text("GRAJ",430,465,font);
+    text = Drawing().text("GRAJ",430,495,font);
 
     //tworzenie przycisków
     sf::RectangleShape button;
-    button = Drawing().draw_button(398, 470,200,50);
+    button = Drawing().draw_button(398, 500,200,50);
 
     while (window.isOpen())
     {
@@ -1139,7 +1139,8 @@ void Blackjack::rules()
             if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
             {
                 sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
-                if (button.getGlobalBounds().contains(mousePos)) {
+                if (button.getGlobalBounds().contains(mousePos))
+                {
                     window.close();
                 }
             }

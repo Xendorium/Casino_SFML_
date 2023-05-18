@@ -49,9 +49,19 @@ int Players::sum()
     int sum=0;
     for(int i = 0; i < hand.size(); i++)
     {
-       sum = sum + hand[i].points_BJ;
-
+        sum = sum + hand[i].points_BJ;
     }
+       if (sum > 21)
+       {
+           for (int i = 0; i < hand.size(); i++)
+           {
+               if (hand[i].points == ("ace")&&(hand[i].points_BJ==11))
+               {
+                   hand[i].points_BJ = 1;
+                   sum = sum - 10;
+               }
+           }
+       }
     return sum;
 }
 

@@ -34,7 +34,7 @@ public:
             {"jack","hearts",10},{"jack","clubs",10},{"jack","diamonds",10},{"jack","spades",10},
             {"queen","hearts",10},{"queen","clubs",10},{"queen","diamonds",10},{"queen","spades",10},
             {"king","hearts",10},{"king","clubs",10},{"king","diamonds",10},{"king","spades",10},
-            {"ace","hearts",1},{"ace","clubs",1},{"ace","diamonds",1},{"ace","spades",1}
+            {"ace","hearts",11},{"ace","clubs",11},{"ace","diamonds",11},{"ace","spades",11}
     };
      //stworzenia nowoczesnego wskaźnika na deck
     unique_ptr<vector<card>> deck_ptr = make_unique<vector<card>>(deck);
