@@ -20,6 +20,12 @@ void Blackjack::start_game()
     //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
+    //załadowanie grfiki tlo
+    sf::Texture tlo;
+    tlo.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/BJ.jpg");
+    sf::Sprite spriteT;
+    spriteT.setTexture(tlo);
+
     //utworzenie okna Lose i WIN
     sf::Texture LW[2];
     sf::Sprite spriteLW[2];
@@ -1057,6 +1063,7 @@ void Blackjack::start_game()
             }
 
         window.clear();
+        window.draw(spriteT);
         //rysowanie przycisków
         for (int i=0; i < 3; i++)
         {

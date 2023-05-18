@@ -17,6 +17,12 @@ void Game_selection::show_games() {
     //renderowanie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
+    //załadowanie grfiki tlo
+    sf::Texture tlo;
+    tlo.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/grafiki jpg/tlo.png");
+    sf::Sprite spriteT;
+    spriteT.setTexture(tlo);
+
     //wczytanie czcionki
     sf::Font font;
     font.loadFromFile("C:/Users/Konkuker/Desktop/programowanie projekt/czcionka/NEON____.ttf");
@@ -52,6 +58,7 @@ void Game_selection::show_games() {
             }
         }
         window.clear();
+        window.draw(spriteT);
         window.draw(text[0]);
         window.draw(button[0]);
         window.draw(button[1]);
