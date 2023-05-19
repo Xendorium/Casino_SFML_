@@ -86,7 +86,6 @@ int Players::random_number()
         mt19937 gen(seed);
         uniform_int_distribution<int> dist(0, 51 - P_and_D_hand.size());
         j = dist(gen);
-        cout << j << endl;
         }while (j>=51-P_and_D_hand.size()||j<0);
     return j;
 }

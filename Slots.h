@@ -13,7 +13,8 @@ public:
     void end_game();
 private:
     void spin();
-
+    int random_number();
+    void wait(int seconds);
 };
 
 
