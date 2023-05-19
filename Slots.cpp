@@ -22,8 +22,8 @@ void Slots::start_game()
     font.loadFromFile("czcionka/NEON____.ttf");
 
     //utworzenie przycisku i napisu SPIN
-    sf::RectangleShape button = Drawing().draw_button(515, 312,400 , 100);
-    sf::Text text = Drawing().text("Spin",660,332,font);
+    sf::RectangleShape button = Drawing().draw_button(437, 522,130 , 60);
+    sf::Text text = Drawing().text("Spin",450,520,font);
 
 
 
