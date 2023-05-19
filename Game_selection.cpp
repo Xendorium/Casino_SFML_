@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "Drawing.h"
 #include "Blackjack.h"
+#include "Slots.h"
 
 void Game_selection::show_games() {
 
@@ -54,7 +55,8 @@ void Game_selection::show_games() {
             }
             if (button[1].getGlobalBounds().contains(mousePos)) {
                 window.close();
-                std::cout<< "wybrales spin" << std::endl;
+                Slots* Slots1 = new Slots;
+                Slots1->start_game();
             }
         }
         window.clear();
