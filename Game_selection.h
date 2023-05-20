@@ -5,9 +5,25 @@
 #ifndef CASINO_SFML__GAME_SELECTION_H
 #define CASINO_SFML__GAME_SELECTION_H
 
+ // xml_c_tag.cpp
+ //compile with: /doc /LD
+ // post-build command: xdcmake xml_c_tag.xdc
 
+/// Class Game_selection
 class Game_selection {
 public:
+    ///<summary>
+    /// show_games method
+    /// </summary>
+    ///<example>
+    /// <code>
+    /// int main()
+    /// {
+    ///     Game_selection *Game_selection1 = new Game_selection;
+    ///     Game_selection1->show_games();
+    /// }
+    /// </code>
+    /// </example>
     static void show_games();
 };
 

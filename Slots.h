@@ -9,7 +9,26 @@
 
 class Slots: public Games {
 public:
+
+    ///<summary>
+    /// start_game method
+    /// </summary>
+    ///<example>
+    /// <code>
+    /// void Game_selection::show_games()
+    /// {
+    ///     Slots S1;
+    ///     wsk = &S1;
+    ///     wsk->start_game();
+    /// }
+    /// </code>
+    /// </example>
     void start_game();
+
+
+    ///<summary>
+    /// start_game method
+    /// </summary>
     void end_game();
 private:
     int random_number();
