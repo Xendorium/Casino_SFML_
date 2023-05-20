@@ -109,7 +109,7 @@ void Slots::start_game()
                         sprite[k].setPosition(191, 223);
                         window.draw(sprite[k]);
                         window.display();
-                        Sleep(500);
+                        Sleep(300);
                         Sprite[0] = sprite[k];
                         S1=k;
                     }
