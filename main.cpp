@@ -1,3 +1,12 @@
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file main.cpp
+ *
+ * Drawing a menu
+ */
+
+
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <iostream>

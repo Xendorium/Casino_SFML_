@@ -2,17 +2,22 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file Game_selection.h
+ *
+ * Declaration of methods implemented in "Game_selection.cpp"
+ * This class represents menu to chose the game
+ */
+
 #ifndef CASINO_SFML__GAME_SELECTION_H
 #define CASINO_SFML__GAME_SELECTION_H
-
- // xml_c_tag.cpp
- //compile with: /doc /LD
- // post-build command: xdcmake xml_c_tag.xdc
 
 /// Class Game_selection
 class Game_selection {
 public:
-    ///<summary>
+    /**<summary>
     /// show_games method
     /// </summary>
     ///<example>
@@ -24,6 +29,7 @@ public:
     /// }
     /// </code>
     /// </example>
+     */
     static void show_games();
 };
 

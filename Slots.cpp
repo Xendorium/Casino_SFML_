@@ -2,6 +2,15 @@
 // Created by Konkuker on 19.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 19/5/2023.
+ *
+ * @file Slots.cpp
+ *
+ * Implementation of methods declared in "Slots.h".
+ */
+
+
 #include "Slots.h"
 #include "Game_selection.h"
 #include "Drawing.h"

@@ -2,6 +2,15 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file Deck.h
+ *
+ *
+ * This class represents a deck of cards
+ */
+
 #ifndef CASINO_SFML__DECK_H
 #define CASINO_SFML__DECK_H
 

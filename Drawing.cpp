@@ -2,6 +2,14 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file Drawing.cpp
+ *
+ * Implementation of methods declared in "Drawing.h".
+ */
+
 #include "Drawing.h"
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>

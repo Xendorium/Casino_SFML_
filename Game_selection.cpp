@@ -2,6 +2,14 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file Game_selection.cpp
+ *
+ * Implementation of methods declared in "Game_selection.h"
+ */
+
 #include "Game_selection.h"
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>

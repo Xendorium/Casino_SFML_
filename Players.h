@@ -2,6 +2,17 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file Players.h
+ *
+ * Declaration of methods implemented in "Players.cpp".
+ *
+ * This class represents Blackjack players
+ */
+
+
 #ifndef CASINO_SFML__PLAYERS_H
 #define CASINO_SFML__PLAYERS_H
 
@@ -15,7 +26,7 @@
 class Players {
 public:
 
-    ///<summary>
+    /**<summary>
     /// draw(vector<Deck::card>& deck,int ilosc) method
     /// </summary>
     ///<example>
@@ -27,9 +38,10 @@ public:
     /// }
     /// </code>
     /// </example>
+    */
     void draw(vector<Deck::card>& deck,int ilosc);
 
-    ///<summary>
+    /**<summary>
     /// clear_hands(vector<Deck::card>& deck) method
     /// </summary>
     ///<example>
@@ -40,13 +52,14 @@ public:
     ///}
     /// </code>
     /// </example>
+    */
     void clear_hands(vector<Deck::card>& deck);
     int sum();
     vector <Deck::card> hand = {};
     vector <Deck::card> P_and_D_hand = {};
 private:
 
-    ///<summary>
+    /**<summary>
     /// random_number() method
     /// </summary>
     ///<example>
@@ -57,6 +70,7 @@ private:
     ///}
     /// </code>
     /// </example>
+    */
     int random_number();
 };
 

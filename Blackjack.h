@@ -2,6 +2,17 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file Blackjack.h
+ *
+ * Declaration of methods implemented in "Blackjack.cpp".
+ *
+ * This class represents game Blackjack
+ */
+
+
 #ifndef CASINO_SFML__BLACKJACK_H
 #define CASINO_SFML__BLACKJACK_H
 #include "Games.h"
@@ -12,7 +23,7 @@
 class Blackjack :public Games{
 public:
 
-    ///<summary>
+    /**<summary>
     /// start_game() method
     /// </summary>
     ///<example>
@@ -25,6 +36,7 @@ public:
     /// }
     /// </code>
     /// </example>
+    */
     void start_game();
 
     ///<summary>
@@ -33,14 +45,16 @@ public:
     void end_game();
 private:
 
-    ///<summary>
+    /**<summary>
     /// rules() method
     /// </summary>
+    */
     void rules();
 
-    ///<summary>
+    /**<summary>
     /// wait() method
     /// </summary>
+     */
     void wait(int seconds);
 };
 

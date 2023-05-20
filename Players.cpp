@@ -2,6 +2,14 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file Players.cpp
+ *
+ * Implementation of methods declared in "Players.h".
+ */
+
 #include "Deck.h"
 #include "Players.h"
 #include <random>

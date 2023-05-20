@@ -2,6 +2,15 @@
 // Created by Konkuker on 15.05.2023.
 //
 
+/**
+ * Created by Dominik Micor on 15/5/2023.
+ *
+ * @file Blackjack.cpp
+ *
+ * Implementation of methods declared in "Blackjack.h".
+ */
+
+
 #include <time.h>
 #include <memory>
 #include "Blackjack.h"
