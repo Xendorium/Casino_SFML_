@@ -171,7 +171,6 @@ void Slots::start_game()
 int Slots::random_number()
 {
     int k = (rand()%(33)+1);
-    cout << k << endl;
     return k;
 }
 
