@@ -126,7 +126,7 @@ void Slots::start_game()
                         window.draw(Sprite[1]);
                         window.draw(sprite[j]);
                         window.display();
-                        Sleep(500);
+                        Sleep(300);
                         Sprite[1] = sprite[j];
                         S2=j;
                     }
@@ -142,7 +142,7 @@ void Slots::start_game()
                         window.draw(Sprite[1]);
                         window.draw(sprite[l]);
                         window.display();
-                        Sleep(500);
+                        Sleep(300);
                         Sprite[2] = sprite[l];
                         S3=l;
                     };
