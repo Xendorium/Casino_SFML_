@@ -6,10 +6,16 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "Drawing.h"
+#include "Games.h"
 #include "Blackjack.h"
 #include "Slots.h"
 
 void Game_selection::show_games() {
+
+    Blackjack B1;
+    Slots S1;
+
+    Games *wsk;
 
     //stworzenie tablicy napisów i przycisków
     sf::Text text[3];
@@ -50,13 +56,13 @@ void Game_selection::show_games() {
             sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
             if (button[0].getGlobalBounds().contains(mousePos)) {
                 window.close();
-                Blackjack *Blackjack1 = new Blackjack;
-                Blackjack1->start_game();
+                wsk = &B1;
+                wsk->start_game();
             }
             if (button[1].getGlobalBounds().contains(mousePos)) {
                 window.close();
-                Slots* Slots1 = new Slots;
-                Slots1->start_game();
+                wsk = &S1;
+                wsk->start_game();
             }
         }
         window.clear();
