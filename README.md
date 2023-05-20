@@ -18,4 +18,16 @@ Po uruchomieniu wyskoczy nam menu, które po wciśnięciu przysicku start przeki
 Następnie cieszyć się już można działającą aplikacją.
 
 Konfiguracja SFML: pobrany folder SFML - GCC 7.3.0 MinGW (SEH) - 64-bit oraz MnGW - MinGW Builds 7.3.0 (64-bit) po rozpakowaniu przerzuciłem do dysku C:/
-Nastepnie Toolchainsy skonfigurowałem pod pobraną wersję MinGW. DO folder cmake_modules wrzuciłem FindSFML.
+Nastepnie Toolchainsy skonfigurowałem pod pobraną wersję MinGW. Do folder cmake_modules wrzuciłem FindSFML.
+
+Linki do grafik wykorzystanych w projekcie:
+<a href="https://www.freepik.com/free-vector/poker-cards_1185219.htm?query=game card">Image by brgfx</a> on Freepik
+<a href="https://www.freepik.com/free-vector/poker-cards_1185218.htm?query=game%20card#from_view=detail_alsolike">Image by brgfx</a> on Freepik
+<a href="https://www.freepik.com/free-vector/poker-cards-set-club-with-back-design_1169226.htm#query=card&position=2&from_view=author">Image by brgfx</a> on Freepik
+<a href="https://www.freepik.com/free-vector/poker-cards_1185218.htm#query=card&position=7&from_view=author">Image by brgfx</a> on Freepik
+https://pl.pinterest.com/pin/premium-vector--317503842491562501/
+<a href="https://www.freepik.com/free-vector/slot-gambling-machine-icons-set_13405535.htm#query=slot%20machine%20symbols&position=5&from_view=search&track=ais">Image by macrovector</a> on Freepik
+
+Autorzy - Dominik Micor
+
+Projekt obejmuje Licencje MIT
