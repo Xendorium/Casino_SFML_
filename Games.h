@@ -18,7 +18,7 @@ class Games {
 public:
 
     /**<summary>
-    /// launching the main loop with the selected game
+    /// virtual start_game() metod
     ///<summary>
     */
     virtual void start_game() = 0;
