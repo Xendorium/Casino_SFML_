@@ -12,7 +12,7 @@ Sloty natomiast to typowa maszyna, która losuje po 3 elementy z danej puli. Gra
 Wszystko zrobione jest w interfejsie graficznym SFML.
 
 Aby zainstalować Casyno należy pobrać je z poniższego linku: 
-https://drive.google.com/file/d/1ru_NM-XK-1YWxETOcAApkm08_3RhpBW2/view?usp=sharing
+[https://drive.google.com/file/d/1ru_NM-XK-1YWxETOcAApkm08_3RhpBW2/view?usp=sharing](https://drive.google.com/drive/folders/1hytT5r3lwJrnxyu46MHK1601w0YuJaBa?usp=sharing)
 Następnie wypakować i odpalić plik wykonywalny exe. 
 Po uruchomieniu wyskoczy nam menu, które po wciśnięciu przysicku start przekieruje nas do menu wyboru gry.
 Następnie cieszyć się już można działającą aplikacją.
