@@ -13,7 +13,7 @@ Wszystko zrobione jest w interfejsie graficznym SFML.
 
 Aby zainstalować Casyno należy pobrać je z poniższego linku: 
 https://drive.google.com/drive/folders/1_1ptLjmJ9gzZZ7fQEpjggwRSpt2MSsj-?usp=sharing
-Następnie wypakować i odpalić plik wykonywalny exe. 
+W folderze znajduje się plik exe. Należy go uruchomić. 
 Po uruchomieniu wyskoczy nam menu, które po wciśnięciu przysicku start przekieruje nas do menu wyboru gry.
 Następnie cieszyć się już można działającą aplikacją.
 
