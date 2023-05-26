@@ -23,7 +23,7 @@ void Blackjack::start_game() {
 
     //załadowanie grfiki tlo
     sf::Texture tlo;
-    tlo.loadFromFile("grafiki jpg/BJ.jpg");
+    tlo.loadFromFile("graphics_jpg/BJ.jpg");
     sf::Sprite spriteT;
     spriteT.setTexture(tlo);
 
@@ -31,21 +31,21 @@ void Blackjack::start_game() {
     sf::Texture LW[2];
     sf::Sprite spriteLW[2];
 
-    LW[0].loadFromFile("grafiki jpg/LOSE.png");
-    LW[1].loadFromFile("grafiki jpg/WIN.png");
+    LW[0].loadFromFile("graphics_jpg/LOSE.png");
+    LW[1].loadFromFile("graphics_jpg/WIN.png");
 
     spriteLW[0].setTexture(LW[0]);
     spriteLW[1].setTexture(LW[1]);
 
     //wczytanie czcionki
     sf::Font font;
-    font.loadFromFile("czcionka/NEON____.ttf");
+    font.loadFromFile("font/NEON____.ttf");
 
     //utworzenie napisów
     sf::Text text[3];
     text[0] = Drawing().text("Stand", 20, 295, font);
     text[1] = Drawing().text("Menu", 40, 195, font);
-    text[2] = Drawing().text("Zasady", 805, 390, font);
+    text[2] = Drawing().text("Rules", 825, 390, font);
 
     //tworzenie przycisków
     sf::RectangleShape button[3];
@@ -57,71 +57,71 @@ void Blackjack::start_game() {
 
     //PIKI
     sf::Texture card[54];
-    card[0].loadFromFile("grafiki jpg/piki/2P.jpg");
-    card[1].loadFromFile("grafiki jpg/piki/3P.jpg");
-    card[2].loadFromFile("grafiki jpg/piki/4P.jpg");
-    card[3].loadFromFile("grafiki jpg/piki/5P.jpg");
-    card[4].loadFromFile("grafiki jpg/piki/6P.jpg");
-    card[5].loadFromFile("grafiki jpg/piki/7P.jpg");
-    card[6].loadFromFile("grafiki jpg/piki/8P.jpg");
-    card[7].loadFromFile("grafiki jpg/piki/9P.jpg");
-    card[8].loadFromFile("grafiki jpg/piki/10P.jpg");
-    card[9].loadFromFile("grafiki jpg/piki/JP.jpg");
-    card[10].loadFromFile("grafiki jpg/piki/DP.jpg");
-    card[11].loadFromFile("grafiki jpg/piki/KP.jpg");
-    card[12].loadFromFile("grafiki jpg/piki/AP.jpg");
-    card[13].loadFromFile("grafiki jpg/piki/rewers.jpg");
+    card[0].loadFromFile("graphics_jpg/P/2P.jpg");
+    card[1].loadFromFile("graphics_jpg/P/3P.jpg");
+    card[2].loadFromFile("graphics_jpg/P/4P.jpg");
+    card[3].loadFromFile("graphics_jpg/P/5P.jpg");
+    card[4].loadFromFile("graphics_jpg/P/6P.jpg");
+    card[5].loadFromFile("graphics_jpg/P/7P.jpg");
+    card[6].loadFromFile("graphics_jpg/P/8P.jpg");
+    card[7].loadFromFile("graphics_jpg/P/9P.jpg");
+    card[8].loadFromFile("graphics_jpg/P/10P.jpg");
+    card[9].loadFromFile("graphics_jpg/P/JP.jpg");
+    card[10].loadFromFile("graphics_jpg/P/DP.jpg");
+    card[11].loadFromFile("graphics_jpg/P/KP.jpg");
+    card[12].loadFromFile("graphics_jpg/P/AP.jpg");
+    card[13].loadFromFile("graphics_jpg/P/rewers.jpg");
 
     //SERCA
-    card[14].loadFromFile("grafiki jpg/serca/2S.jpg");
-    card[15].loadFromFile("grafiki jpg/serca/3S.jpg");
-    card[16].loadFromFile("grafiki jpg/serca/4S.jpg");
-    card[17].loadFromFile("grafiki jpg/serca/5S.jpg");
-    card[18].loadFromFile("grafiki jpg/serca/6S.jpg");
-    card[19].loadFromFile("grafiki jpg/serca/7S.jpg");
-    card[20].loadFromFile("grafiki jpg/serca/8S.jpg");
-    card[21].loadFromFile("grafiki jpg/serca/9S.jpg");
-    card[22].loadFromFile("grafiki jpg/serca/10S.jpg");
-    card[23].loadFromFile("grafiki jpg/serca/JS.jpg");
-    card[24].loadFromFile("grafiki jpg/serca/DS.jpg");
-    card[25].loadFromFile("grafiki jpg/serca/KS.jpg");
-    card[26].loadFromFile("grafiki jpg/serca/AS.jpg");
+    card[14].loadFromFile("graphics_jpg/H/2S.jpg");
+    card[15].loadFromFile("graphics_jpg/H/3S.jpg");
+    card[16].loadFromFile("graphics_jpg/H/4S.jpg");
+    card[17].loadFromFile("graphics_jpg/H/5S.jpg");
+    card[18].loadFromFile("graphics_jpg/H/6S.jpg");
+    card[19].loadFromFile("graphics_jpg/H/7S.jpg");
+    card[20].loadFromFile("graphics_jpg/H/8S.jpg");
+    card[21].loadFromFile("graphics_jpg/H/9S.jpg");
+    card[22].loadFromFile("graphics_jpg/H/10S.jpg");
+    card[23].loadFromFile("graphics_jpg/H/JS.jpg");
+    card[24].loadFromFile("graphics_jpg/H/DS.jpg");
+    card[25].loadFromFile("graphics_jpg/H/KS.jpg");
+    card[26].loadFromFile("graphics_jpg/H/AS.jpg");
 
     //TREFL
-    card[27].loadFromFile("grafiki jpg/trefl/2T.jpg");
-    card[28].loadFromFile("grafiki jpg/trefl/3T.jpg");
-    card[29].loadFromFile("grafiki jpg/trefl/4T.jpg");
-    card[30].loadFromFile("grafiki jpg/trefl/5T.jpg");
-    card[31].loadFromFile("grafiki jpg/trefl/6T.jpg");
-    card[32].loadFromFile("grafiki jpg/trefl/7T.jpg");
-    card[33].loadFromFile("grafiki jpg/trefl/8T.jpg");
-    card[34].loadFromFile("grafiki jpg/trefl/9T.jpg");
-    card[35].loadFromFile("grafiki jpg/trefl/10T.jpg");
-    card[36].loadFromFile("grafiki jpg/trefl/JT.jpg");
-    card[37].loadFromFile("grafiki jpg/trefl/DT.jpg");
-    card[38].loadFromFile("grafiki jpg/trefl/KT.jpg");
-    card[39].loadFromFile("grafiki jpg/trefl/AT.jpg");
+    card[27].loadFromFile("graphics_jpg/T/2T.jpg");
+    card[28].loadFromFile("graphics_jpg/T/3T.jpg");
+    card[29].loadFromFile("graphics_jpg/T/4T.jpg");
+    card[30].loadFromFile("graphics_jpg/T/5T.jpg");
+    card[31].loadFromFile("graphics_jpg/T/6T.jpg");
+    card[32].loadFromFile("graphics_jpg/T/7T.jpg");
+    card[33].loadFromFile("graphics_jpg/T/8T.jpg");
+    card[34].loadFromFile("graphics_jpg/T/9T.jpg");
+    card[35].loadFromFile("graphics_jpg/T/10T.jpg");
+    card[36].loadFromFile("graphics_jpg/T/JT.jpg");
+    card[37].loadFromFile("graphics_jpg/T/DT.jpg");
+    card[38].loadFromFile("graphics_jpg/T/KT.jpg");
+    card[39].loadFromFile("graphics_jpg/T/AT.jpg");
 
     //KARO
-    card[40].loadFromFile("grafiki jpg/karo/2K.jpg");
-    card[41].loadFromFile("grafiki jpg/karo/3K.jpg");
-    card[42].loadFromFile("grafiki jpg/karo/4K.jpg");
-    card[43].loadFromFile("grafiki jpg/karo/5K.jpg");
-    card[44].loadFromFile("grafiki jpg/karo/6K.jpg");
-    card[45].loadFromFile("grafiki jpg/karo/7K.jpg");
-    card[46].loadFromFile("grafiki jpg/karo/8K.jpg");
-    card[47].loadFromFile("grafiki jpg/karo/9K.jpg");
-    card[48].loadFromFile("grafiki jpg/karo/10K.jpg");
-    card[49].loadFromFile("grafiki jpg/karo/JK.jpg");
-    card[50].loadFromFile("grafiki jpg/karo/DK.jpg");
-    card[51].loadFromFile("grafiki jpg/karo/KK.jpg");
-    card[52].loadFromFile("grafiki jpg/karo/AK.jpg");
+    card[40].loadFromFile("graphics_jpg/K/2K.jpg");
+    card[41].loadFromFile("graphics_jpg/K/3K.jpg");
+    card[42].loadFromFile("graphics_jpg/K/4K.jpg");
+    card[43].loadFromFile("graphics_jpg/K/5K.jpg");
+    card[44].loadFromFile("graphics_jpg/K/6K.jpg");
+    card[45].loadFromFile("graphics_jpg/K/7K.jpg");
+    card[46].loadFromFile("graphics_jpg/K/8K.jpg");
+    card[47].loadFromFile("graphics_jpg/K/9K.jpg");
+    card[48].loadFromFile("graphics_jpg/K/10K.jpg");
+    card[49].loadFromFile("graphics_jpg/K/JK.jpg");
+    card[50].loadFromFile("graphics_jpg/K/DK.jpg");
+    card[51].loadFromFile("graphics_jpg/K/KK.jpg");
+    card[52].loadFromFile("graphics_jpg/K/AK.jpg");
 
     //tablica kart dla gracza
     sf::Sprite sprite[54];
 
     //REWERS
-    card[53].loadFromFile("grafiki jpg/piki/rewers.jpg");
+    card[53].loadFromFile("graphics_jpg/P/rewers.jpg");
 
     sprite[53].setTexture(card[53]);
     sprite[53].setPosition(870.f, 230.f);
@@ -928,17 +928,17 @@ void Blackjack::rules() {
 
     //wczytanie czcionki
     sf::Font font;
-    font.loadFromFile("czcionka/NEON____.ttf");
+    font.loadFromFile("font/NEON____.ttf");
 
     //załadowanie zasad
     sf::Texture menu;
-    menu.loadFromFile("grafiki jpg/zasady.png");
+    menu.loadFromFile("graphics_jpg/rules.png");
     sf::Sprite sprite;
     sprite.setTexture(menu);
 
     //utworzenie napisów
     sf::Text text;
-    text = Drawing().text("GRAJ", 430, 495, font);
+    text = Drawing().text("PLAY", 430, 495, font);
 
     //tworzenie przycisków
     sf::RectangleShape button;

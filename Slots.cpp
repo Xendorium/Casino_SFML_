@@ -21,11 +21,11 @@ void Slots::start_game() {
 
     //załadowanie grfiki tlo
     sf::Texture tlo;
-    tlo.loadFromFile("grafiki jpg//slotmachine.png");
+    tlo.loadFromFile("graphics_jpg//slotmachine.png");
 
     //załadowanie grfiki Win
     sf::Texture WIN;
-    WIN.loadFromFile("grafiki jpg//WIN.png");
+    WIN.loadFromFile("graphics_jpg//WIN.png");
 
     sf::Sprite spriteTW[2];
     spriteTW[0].setTexture(tlo);
@@ -33,7 +33,7 @@ void Slots::start_game() {
 
     //wczytanie czcionki
     sf::Font font;
-    font.loadFromFile("czcionka/NEON____.ttf");
+    font.loadFromFile("font/NEON____.ttf");
 
     //utworzenie przycisków i napisów
     sf::RectangleShape button[3];
@@ -46,14 +46,14 @@ void Slots::start_game() {
 
     //załadowanie grafik do losowań
     sf::Texture element[8];
-    element[0].loadFromFile("grafiki jpg/slots/7.png");
-    element[1].loadFromFile("grafiki jpg/slots/truskawka.png");
-    element[2].loadFromFile("grafiki jpg/slots/banan.png");
-    element[3].loadFromFile("grafiki jpg/slots/cytryna.png");
-    element[4].loadFromFile("grafiki jpg/slots/pomarancza.png");
-    element[5].loadFromFile("grafiki jpg/slots/sliwka.png");
-    element[6].loadFromFile("grafiki jpg/slots/arbuz.png");
-    element[7].loadFromFile("grafiki jpg/slots/wisnia.png");
+    element[0].loadFromFile("graphics_jpg/slots/7.png");
+    element[1].loadFromFile("graphics_jpg/slots/strawberry.png");
+    element[2].loadFromFile("graphics_jpg/slots/banana.png");
+    element[3].loadFromFile("graphics_jpg/slots/lemon.png");
+    element[4].loadFromFile("graphics_jpg/slots/orange.png");
+    element[5].loadFromFile("graphics_jpg/slots/plum.png");
+    element[6].loadFromFile("graphics_jpg/slots/watermelon.png");
+    element[7].loadFromFile("graphics_jpg/slots/cherry.png");
 
     sf::Sprite sprite[11];
     sprite[0].setTexture(element[0]);

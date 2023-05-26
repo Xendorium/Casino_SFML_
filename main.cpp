@@ -21,13 +21,13 @@ int main() {
 
     //załadowanie grfiki menu
     sf::Texture menu;
-    menu.loadFromFile("grafiki jpg/menu/menu.png");
+    menu.loadFromFile("graphics_jpg/menu/menu.png");
     sf::Sprite sprite;
     sprite.setTexture(menu);
 
     //ustawianie czcionmi
     sf::Font font;
-    font.loadFromFile("czcionka/NEON____.TTF");
+    font.loadFromFile("font/NEON____.TTF");
 
     //przypisywanie rysowania
     sf::RectangleShape button = Drawing().draw_button(298, 350, 400, 100);

@@ -28,16 +28,16 @@ void Game_selection::show_games() {
 
     //załadowanie grfiki tlo
     sf::Texture tlo;
-    tlo.loadFromFile("grafiki jpg/tlo.png");
+    tlo.loadFromFile("graphics_jpg/background.png");
     sf::Sprite spriteT;
     spriteT.setTexture(tlo);
 
     //wczytanie czcionki
     sf::Font font;
-    font.loadFromFile("czcionka/NEON____.ttf");
+    font.loadFromFile("font/NEON____.ttf");
 
     //tworzenie napisów
-    text[0] = Drawing().text("Wybeirz gre", 330, 150, font);
+    text[0] = Drawing().text("Choose game", 300, 150, font);
     text[1] = Drawing().text("Blackjack", 130, 332, font);
     text[2] = Drawing().text("Spin", 660, 332, font);
 
