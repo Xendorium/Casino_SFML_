@@ -30,21 +30,21 @@ public:
     /// a method for drawing a card from the deck
     /// </summary>
     */
-    void draw(vector<Deck::card>& deck,int ilosc);
+    void draw(std::vector<Deck::card>& deck,int ilosc);
 
     /**<summary>
     /// a method for cleaning the hands of player
     /// </summary>
     */
-    void clear_hands(vector<Deck::card>& deck);
+    void clear_hands(std::vector<Deck::card>& deck);
 
     /**<summary>
     /// sums up the points from the cards
     /// </summary>
     */
     int sum();
-    vector <Deck::card> hand = {};
-    vector <Deck::card> P_and_D_hand = {};
+    std::vector <Deck::card> hand = {};
+    std::vector <Deck::card> P_and_D_hand = {};
 private:
 
     /**<summary>

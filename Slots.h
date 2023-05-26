@@ -28,14 +28,14 @@ public:
     /// creating array for randomized elements
     /// </summary>
     */
-    void start_game();
+    void start_game() override;
 
 
     /**<summary>
     /// end_game();
     /// </summary>
     */
-    void end_game();
+    void end_game() override;
 private:
     /**<summary>
     /// drawing a number

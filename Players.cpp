@@ -18,10 +18,8 @@
 #include <iostream>
 #include <cstdlib>
 
-using namespace std;
-
 //funkcja dobierająca karte
-void Players::draw(vector<Deck::card>& deck,int ilosc)
+void Players::draw(std::vector<Deck::card>& deck,int ilosc)
 {
     int j,i,k;
     if (ilosc == 2)
@@ -74,7 +72,7 @@ int Players::sum()
 }
 
 //funkcja czyszczaca rece graczy
-void Players::clear_hands(vector<Deck::card>& deck)
+void Players::clear_hands(std::vector<Deck::card>& deck)
 {
     for (int i = 0; i < P_and_D_hand.size(); i++)
     {
@@ -90,9 +88,9 @@ int Players::random_number()
 {
     int j;
     do {
-        unsigned seed = chrono::system_clock::now().time_since_epoch().count();
-        mt19937 gen(seed);
-        uniform_int_distribution<int> dist(0, 51 - P_and_D_hand.size());
+        unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+        std::mt19937 gen(seed);
+        std::uniform_int_distribution<int> dist(0, 51 - P_and_D_hand.size());
         j = dist(gen);
         }while (j>=51-P_and_D_hand.size()||j<0);
     return j;

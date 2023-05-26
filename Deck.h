@@ -18,19 +18,17 @@
 #include <vector>
 #include <memory>
 
-using namespace std;
-
 class Deck {
 public:
     //stworzenie struktury karty
     struct card
     {
-        string points;
-        string sign;
+        std::string points;
+        std::string sign;
         int points_BJ;
     };
     //stworzenie vectora kart
-     vector <card> deck = {
+     std::vector <card> deck = {
             {"two","hearts",2},{"two","clubs",2},{"two","diamonds",2},{"two","spades",2},
             {"three","hearts",3},{"three","clubs",3},{"three","diamonds",3},{"three","spades",3},
             {"four","hearts",4},{"four","clubs",4},{"four","diamonds",4},{"four","spades",4},
@@ -46,7 +44,7 @@ public:
             {"ace","hearts",11},{"ace","clubs",11},{"ace","diamonds",11},{"ace","spades",11}
     };
      //stworzenia nowoczesnego wskaźnika na deck
-    unique_ptr<vector<card>> deck_ptr = make_unique<vector<card>>(deck);
+    std::unique_ptr<std::vector<card>> deck_ptr = std::make_unique<std::vector<card>>(deck);
 
 };
 

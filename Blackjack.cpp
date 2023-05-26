@@ -17,12 +17,10 @@
 #include "Players.h"
 #include "Game_selection.h"
 
-using namespace std;
-
 Players *player = new Players;
 Players *dealer = new Players;
 
-std::unique_ptr<Deck> deck_ptr = make_unique<Deck>();
+std::unique_ptr<Deck> deck_ptr = std::make_unique<Deck>();
 
 void Blackjack::start_game()
 {

@@ -31,12 +31,12 @@ public:
     /// checking the results
     /// </summary>
     */
-    void start_game();
+    void start_game() override;
 
     ///<summary>
     /// cleaning the "hands" of players
     /// </summary>
-    void end_game();
+    void end_game() override;
 private:
 
     /**<summary>

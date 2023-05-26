@@ -18,8 +18,6 @@
 #include <windows.h>
 #include <string>
 
-using namespace std;
-
 void Slots::start_game()
 {
     int S1=0,S3=2,S2=1;
