@@ -12,7 +12,6 @@
 
 #include "Drawing.h"
 
-//tworzenie napisów
 sf::Text Drawing::text(std::string text, int x, int y, sf::Font &font) {
     sf::Text lettering(text, font, 50);
     lettering.setFillColor(sf::Color::Yellow);
@@ -20,7 +19,6 @@ sf::Text Drawing::text(std::string text, int x, int y, sf::Font &font) {
     return lettering;
 }
 
-//tworzenie przycisków
 sf::RectangleShape Drawing::draw_button(int x, int y, int z, int i) {
     sf::RectangleShape button(sf::Vector2f(z, i));
     button.setFillColor(sf::Color::Black);

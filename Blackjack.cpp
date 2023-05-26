@@ -18,16 +18,13 @@ Players *dealer = new Players;
 std::unique_ptr<Deck> deck_ptr = std::make_unique<Deck>();
 
 void Blackjack::start_game() {
-    //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
-    //załadowanie grfiki tlo
     sf::Texture tlo;
     tlo.loadFromFile("graphics_jpg/BJ.jpg");
     sf::Sprite spriteT;
     spriteT.setTexture(tlo);
 
-    //utworzenie okna Lose i WIN
     sf::Texture LW[2];
     sf::Sprite spriteLW[2];
 
@@ -37,25 +34,20 @@ void Blackjack::start_game() {
     spriteLW[0].setTexture(LW[0]);
     spriteLW[1].setTexture(LW[1]);
 
-    //wczytanie czcionki
     sf::Font font;
     font.loadFromFile("font/NEON____.ttf");
 
-    //utworzenie napisów
     sf::Text text[3];
     text[0] = Drawing().text("Stand", 20, 295, font);
     text[1] = Drawing().text("Menu", 40, 195, font);
     text[2] = Drawing().text("Rules", 825, 390, font);
 
-    //tworzenie przycisków
     sf::RectangleShape button[3];
     button[0] = Drawing().draw_button(10, 300, 200, 50);
     button[1] = Drawing().draw_button(10, 200, 200, 50);
     button[2] = Drawing().draw_button(800, 390, 210, 60);
 
-    //zczytanie kart do gry
-
-    //PIKI
+    //P
     sf::Texture card[54];
     card[0].loadFromFile("graphics_jpg/P/2P.jpg");
     card[1].loadFromFile("graphics_jpg/P/3P.jpg");
@@ -72,7 +64,7 @@ void Blackjack::start_game() {
     card[12].loadFromFile("graphics_jpg/P/AP.jpg");
     card[13].loadFromFile("graphics_jpg/P/rewers.jpg");
 
-    //SERCA
+    //H
     card[14].loadFromFile("graphics_jpg/H/2S.jpg");
     card[15].loadFromFile("graphics_jpg/H/3S.jpg");
     card[16].loadFromFile("graphics_jpg/H/4S.jpg");
@@ -87,7 +79,7 @@ void Blackjack::start_game() {
     card[25].loadFromFile("graphics_jpg/H/KS.jpg");
     card[26].loadFromFile("graphics_jpg/H/AS.jpg");
 
-    //TREFL
+    //T
     card[27].loadFromFile("graphics_jpg/T/2T.jpg");
     card[28].loadFromFile("graphics_jpg/T/3T.jpg");
     card[29].loadFromFile("graphics_jpg/T/4T.jpg");
@@ -102,7 +94,7 @@ void Blackjack::start_game() {
     card[38].loadFromFile("graphics_jpg/T/KT.jpg");
     card[39].loadFromFile("graphics_jpg/T/AT.jpg");
 
-    //KARO
+    //K
     card[40].loadFromFile("graphics_jpg/K/2K.jpg");
     card[41].loadFromFile("graphics_jpg/K/3K.jpg");
     card[42].loadFromFile("graphics_jpg/K/4K.jpg");
@@ -117,30 +109,24 @@ void Blackjack::start_game() {
     card[51].loadFromFile("graphics_jpg/K/KK.jpg");
     card[52].loadFromFile("graphics_jpg/K/AK.jpg");
 
-    //tablica kart dla gracza
     sf::Sprite sprite[54];
 
-    //REWERS
+    //R
     card[53].loadFromFile("graphics_jpg/P/rewers.jpg");
 
     sprite[53].setTexture(card[53]);
     sprite[53].setPosition(870.f, 230.f);
 
-    //tablica kart dla Dealera
     sf::Sprite Sprite[53];
 
-    //rewers Dealera
     sf::Sprite Rsprite;
     Rsprite.setTexture(card[53]);
     Rsprite.setPosition(115.f, 0.f);
 
-    //Dobieranie kart i pokazywanie ich przez gracza
     player->draw(*(deck_ptr->deck_ptr), 2);
 
-    //Dobranie karty i pokazanie jej przez krupiera
     dealer->draw(*(deck_ptr->deck_ptr), 1);
 
-    //rysowanie kart Dealera
     for (int i = 0; i < dealer->hand.size(); i++) {
         int x = 15 + 100 * i;
         if (dealer->hand[i].sign == "hearts") {
@@ -880,31 +866,26 @@ void Blackjack::start_game() {
 
         window.clear();
         window.draw(spriteT);
-        //rysowanie przycisków
+
         for (int i = 0; i < 3; i++) {
             window.draw(button[i]);
         }
 
-        //rysowanie kart Gracza
         for (int i = 0; i < player->hand.size(); i++) {
             window.draw(sprite[i]);
         }
 
-        //rysowanie rewersów
         window.draw(sprite[53]);
         window.draw(Rsprite);
 
-        //rysowanie pierwszej karty Dealera
         window.draw(Sprite[0]);
 
-        //rysowanie tekstu
         for (int i = 0; i < 3; i++) {
             window.draw(text[i]);
         }
 
         window.display();
 
-        //przegrana gracza
         if (player->sum() > 21) {
             end_game();
             wait(2);
@@ -923,24 +904,19 @@ void Blackjack::end_game() {
 }
 
 void Blackjack::rules() {
-    //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
-    //wczytanie czcionki
     sf::Font font;
     font.loadFromFile("font/NEON____.ttf");
 
-    //załadowanie zasad
     sf::Texture menu;
     menu.loadFromFile("graphics_jpg/rules.png");
     sf::Sprite sprite;
     sprite.setTexture(menu);
 
-    //utworzenie napisów
     sf::Text text;
     text = Drawing().text("PLAY", 430, 495, font);
 
-    //tworzenie przycisków
     sf::RectangleShape button;
     button = Drawing().draw_button(398, 500, 200, 50);
 

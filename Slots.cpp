@@ -16,14 +16,11 @@
 void Slots::start_game() {
     int S1 = 0, S3 = 2, S2 = 1;
 
-    //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
-    //załadowanie grfiki tlo
     sf::Texture tlo;
     tlo.loadFromFile("graphics_jpg//slotmachine.png");
 
-    //załadowanie grfiki Win
     sf::Texture WIN;
     WIN.loadFromFile("graphics_jpg//WIN.png");
 
@@ -31,11 +28,9 @@ void Slots::start_game() {
     spriteTW[0].setTexture(tlo);
     spriteTW[1].setTexture(WIN);
 
-    //wczytanie czcionki
     sf::Font font;
     font.loadFromFile("font/NEON____.ttf");
 
-    //utworzenie przycisków i napisów
     sf::RectangleShape button[3];
     button[0] = Drawing().draw_button(437, 517, 130, 60);
     button[1] = Drawing().draw_button(10, 30, 200, 50);
@@ -44,7 +39,6 @@ void Slots::start_game() {
     text[0] = Drawing().text("Spin", 450, 515, font);
     text[1] = Drawing().text("Menu", 40, 25, font);
 
-    //załadowanie grafik do losowań
     sf::Texture element[8];
     element[0].loadFromFile("graphics_jpg/slots/7.png");
     element[1].loadFromFile("graphics_jpg/slots/strawberry.png");

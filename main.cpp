@@ -16,20 +16,16 @@
 int main() {
     srand(time(NULL));
 
-    //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
-    //załadowanie grfiki menu
     sf::Texture menu;
     menu.loadFromFile("graphics_jpg/menu/menu.png");
     sf::Sprite sprite;
     sprite.setTexture(menu);
 
-    //ustawianie czcionmi
     sf::Font font;
     font.loadFromFile("font/NEON____.TTF");
 
-    //przypisywanie rysowania
     sf::RectangleShape button = Drawing().draw_button(298, 350, 400, 100);
     sf::Text write = Drawing().text("Start Game", 318, 370, font);
 

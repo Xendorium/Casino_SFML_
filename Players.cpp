@@ -12,7 +12,6 @@
 
 #include "Players.h"
 
-//funkcja dobierająca karte
 void Players::draw(std::vector<Deck::card> &deck, int ilosc) {
     int j, i, k;
     if (ilosc == 2) {
@@ -39,7 +38,6 @@ void Players::draw(std::vector<Deck::card> &deck, int ilosc) {
     }
 }
 
-//funkcja sumujaca punkty do Blackjacka
 int Players::sum() {
     int sum = 0;
     for (int i = 0; i < hand.size(); i++) {
@@ -56,7 +54,6 @@ int Players::sum() {
     return sum;
 }
 
-//funkcja czyszczaca rece graczy
 void Players::clear_hands(std::vector<Deck::card> &deck) {
     for (int i = 0; i < P_and_D_hand.size(); i++) {
         Deck::card C1 = {P_and_D_hand[i].points, P_and_D_hand[i].sign, P_and_D_hand[i].points_BJ};
@@ -66,7 +63,6 @@ void Players::clear_hands(std::vector<Deck::card> &deck) {
     P_and_D_hand.clear();
 }
 
-//funkcja losująca liczbe
 int Players::random_number() {
     int j;
     do {

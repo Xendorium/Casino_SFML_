@@ -19,29 +19,23 @@ void Game_selection::show_games() {
 
     Games *wsk;
 
-    //stworzenie tablicy napisów i przycisków
     sf::Text text[3];
     sf::RectangleShape button[2];
 
-    //renderowanie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
 
-    //załadowanie grfiki tlo
     sf::Texture tlo;
     tlo.loadFromFile("graphics_jpg/background.png");
     sf::Sprite spriteT;
     spriteT.setTexture(tlo);
 
-    //wczytanie czcionki
     sf::Font font;
     font.loadFromFile("font/NEON____.ttf");
 
-    //tworzenie napisów
     text[0] = Drawing().text("Choose game", 300, 150, font);
     text[1] = Drawing().text("Blackjack", 130, 332, font);
     text[2] = Drawing().text("Spin", 660, 332, font);
 
-    //utworzenie przycisków
     button[0] = Drawing().draw_button(85, 312, 400, 100);
     button[1] = Drawing().draw_button(515, 312, 400, 100);
 
