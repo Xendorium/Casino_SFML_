@@ -22,28 +22,25 @@ class Slots: public Games {
 public:
 
     /**<summary>
-    /// start_game method
+    /// loading the main loop
+    /// load font, graphics
+    /// checking the results
+    /// creating array for randomized elements
     /// </summary>
-    ///<example>
-    /// <code>
-    /// void Game_selection::show_games()
-    /// {
-    ///     Slots S1;
-    ///     wsk = &S1;
-    ///     wsk->start_game();
-    /// }
-    /// </code>
-    /// </example>
     */
     void start_game();
 
 
     /**<summary>
-    /// start_game method
+    /// end_game();
     /// </summary>
     */
     void end_game();
 private:
+    /**<summary>
+    /// drawing a number
+    /// </summary>
+    */
     int random_number();
 };
 

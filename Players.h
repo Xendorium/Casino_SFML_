@@ -27,49 +27,29 @@ class Players {
 public:
 
     /**<summary>
-    /// draw(vector<Deck::card>& deck,int ilosc) method
+    /// a method for drawing a card from the deck
     /// </summary>
-    ///<example>
-    /// <code>
-    /// void Blackjack::start_game()
-    /// {
-    ///    Players *player = new Players;
-    ///    player->draw(*(deck_ptr->deck_ptr), 2);
-    /// }
-    /// </code>
-    /// </example>
     */
     void draw(vector<Deck::card>& deck,int ilosc);
 
     /**<summary>
-    /// clear_hands(vector<Deck::card>& deck) method
+    /// a method for cleaning the hands of player
     /// </summary>
-    ///<example>
-    /// <code>
-    ///void Blackjack::end_game()
-    ///{
-    ///    player->clear_hands(*deck_ptr->deck_ptr);
-    ///}
-    /// </code>
-    /// </example>
     */
     void clear_hands(vector<Deck::card>& deck);
+
+    /**<summary>
+    /// sums up the points from the cards
+    /// </summary>
+    */
     int sum();
     vector <Deck::card> hand = {};
     vector <Deck::card> P_and_D_hand = {};
 private:
 
     /**<summary>
-    /// random_number() method
+    /// drawing a number
     /// </summary>
-    ///<example>
-    /// <code>
-    ///void Players::draw(vector<Deck::card>& deck,int ilosc)
-    ///{
-    ///    j = random_number();
-    ///}
-    /// </code>
-    /// </example>
     */
     int random_number();
 };

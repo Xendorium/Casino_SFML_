@@ -19,16 +19,8 @@ class Game_selection {
 public:
     /**<summary>
     /// show_games method
+    /// creating a game selection menu and moving to the selected game
     /// </summary>
-    ///<example>
-    /// <code>
-    /// int main()
-    /// {
-    ///     Game_selection *Game_selection1 = new Game_selection;
-    ///     Game_selection1->show_games();
-    /// }
-    /// </code>
-    /// </example>
      */
     static void show_games();
 };

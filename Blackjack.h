@@ -24,35 +24,29 @@ class Blackjack :public Games{
 public:
 
     /**<summary>
-    /// start_game() method
+    /// creating the main window
+    /// loading font, graphics
+    /// creating arrays for players cards
+    /// drawing player cards
+    /// checking the results
     /// </summary>
-    ///<example>
-    /// <code>
-    /// void Game_selection::show_games()
-    /// {
-    ///     Blackjack B1;
-    ///     wsk = &B1;
-    ///     wsk->start_game();
-    /// }
-    /// </code>
-    /// </example>
     */
     void start_game();
 
     ///<summary>
-    /// end_game() method
+    /// cleaning the "hands" of players
     /// </summary>
     void end_game();
 private:
 
     /**<summary>
-    /// rules() method
+    /// showing the rules of the game
     /// </summary>
     */
     void rules();
 
     /**<summary>
-    /// wait() method
+    /// method used to create a break
     /// </summary>
      */
     void wait(int seconds);
