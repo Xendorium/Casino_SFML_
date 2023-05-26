@@ -24,7 +24,7 @@
 #include "Game_selection.h"
 
 /// Subclass Blackjack
-class Blackjack :public Games{
+class Blackjack : public Games {
 public:
 
     /**<summary>
@@ -41,6 +41,7 @@ public:
     /// cleaning the "hands" of players
     /// </summary>
     void end_game() override;
+
 private:
 
     /**<summary>

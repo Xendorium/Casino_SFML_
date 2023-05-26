@@ -13,11 +13,8 @@
 #include "Game_selection.h"
 #include "Drawing.h"
 
-#include "Deck.h"
-
-int main()
-{
-    srand( time( NULL ) );
+int main() {
+    srand(time(NULL));
 
     //utworzenie okna
     sf::RenderWindow window(sf::VideoMode(1024, 600), "Casino");
@@ -33,18 +30,15 @@ int main()
     font.loadFromFile("czcionka/NEON____.TTF");
 
     //przypisywanie rysowania
-    sf::RectangleShape button = Drawing().draw_button(298, 350, 400 , 100);
-    sf::Text write = Drawing().text("Start Game",318,370,font);
+    sf::RectangleShape button = Drawing().draw_button(298, 350, 400, 100);
+    sf::Text write = Drawing().text("Start Game", 318, 370, font);
 
-    while (window.isOpen())
-    {
+    while (window.isOpen()) {
         sf::Event event;
-        while (window.pollEvent(event))
-        {
+        while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
-            if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
-            {
+            if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left) {
                 sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
                 if (button.getGlobalBounds().contains(mousePos)) {
                     window.close();

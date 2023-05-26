@@ -37,24 +37,21 @@ void Game_selection::show_games() {
     font.loadFromFile("czcionka/NEON____.ttf");
 
     //tworzenie napisów
-    text[0] = Drawing().text("Wybeirz gre",330,150,font);
-    text[1] = Drawing().text("Blackjack",130,332,font);
-    text[2] = Drawing().text("Spin",660,332,font);
+    text[0] = Drawing().text("Wybeirz gre", 330, 150, font);
+    text[1] = Drawing().text("Blackjack", 130, 332, font);
+    text[2] = Drawing().text("Spin", 660, 332, font);
 
-   //utworzenie przycisków
-    button[0] = Drawing().draw_button(85, 312,400 , 100);
-    button[1] = Drawing().draw_button(515, 312,400 , 100);
+    //utworzenie przycisków
+    button[0] = Drawing().draw_button(85, 312, 400, 100);
+    button[1] = Drawing().draw_button(515, 312, 400, 100);
 
-    while (window.isOpen())
-    {
+    while (window.isOpen()) {
         sf::Event event;
-        while (window.pollEvent(event))
-        {
+        while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
-        {
+        if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left) {
             sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
             if (button[0].getGlobalBounds().contains(mousePos)) {
                 window.close();

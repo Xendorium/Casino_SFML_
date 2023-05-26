@@ -25,7 +25,7 @@
 #include <string>
 
 /// Subclass Games
-class Slots: public Games {
+class Slots : public Games {
 public:
 
     /**<summary>
@@ -43,6 +43,7 @@ public:
     /// </summary>
     */
     void end_game() override;
+
 private:
     /**<summary>
     /// drawing a number
