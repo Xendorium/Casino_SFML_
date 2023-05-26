@@ -21,6 +21,9 @@
 #include <random>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <chrono>
+#include <iostream>
+#include <cstdlib>
 
 /// Class Players
 class Players {

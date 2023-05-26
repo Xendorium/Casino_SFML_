@@ -11,11 +11,6 @@
  */
 
 #include "Drawing.h"
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
-#include <iostream>
-
-
 
 //tworzenie napisów
 sf::Text Drawing::text(std::string text, int x, int y,sf::Font& font)

@@ -15,9 +15,13 @@
 
 #ifndef CASINO_SFML__BLACKJACK_H
 #define CASINO_SFML__BLACKJACK_H
+
 #include "Games.h"
 #include "Players.h"
 #include "Drawing.h"
+#include <time.h>
+#include <memory>
+#include "Game_selection.h"
 
 /// Subclass Blackjack
 class Blackjack :public Games{

@@ -12,11 +12,6 @@
 
 
 #include "Slots.h"
-#include "Game_selection.h"
-#include "Drawing.h"
-#include <memory>
-#include <windows.h>
-#include <string>
 
 void Slots::start_game()
 {

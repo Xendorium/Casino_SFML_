@@ -10,13 +10,7 @@
  * Implementation of methods declared in "Players.h".
  */
 
-#include "Deck.h"
 #include "Players.h"
-#include <random>
-#include <vector>
-#include <chrono>
-#include <iostream>
-#include <cstdlib>
 
 //funkcja dobierająca karte
 void Players::draw(std::vector<Deck::card>& deck,int ilosc)

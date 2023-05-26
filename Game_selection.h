@@ -14,6 +14,13 @@
 #ifndef CASINO_SFML__GAME_SELECTION_H
 #define CASINO_SFML__GAME_SELECTION_H
 
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+#include "Drawing.h"
+#include "Games.h"
+#include "Blackjack.h"
+#include "Slots.h"
+
 /// Class Game_selection
 class Game_selection {
 public:

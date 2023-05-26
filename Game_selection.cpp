@@ -11,12 +11,6 @@
  */
 
 #include "Game_selection.h"
-#include <SFML/Window.hpp>
-#include <SFML/Graphics.hpp>
-#include "Drawing.h"
-#include "Games.h"
-#include "Blackjack.h"
-#include "Slots.h"
 
 void Game_selection::show_games() {
 

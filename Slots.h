@@ -15,7 +15,14 @@
 
 #ifndef CASINO_SFML__SLOTS_H
 #define CASINO_SFML__SLOTS_H
+
 #include "Games.h"
+#include "Slots.h"
+#include "Game_selection.h"
+#include "Drawing.h"
+#include <memory>
+#include <windows.h>
+#include <string>
 
 /// Subclass Games
 class Slots: public Games {
