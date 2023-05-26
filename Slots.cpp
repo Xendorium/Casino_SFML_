@@ -130,7 +130,7 @@ void Slots::start_game() {
                 }
                 if (button[1].getGlobalBounds().contains(mousePos)) {
                     window.close();
-                    Game_selection::show_games();
+                    end_game();
                 }
             }
 
@@ -140,7 +140,7 @@ void Slots::start_game() {
                 window.display();
                 Sleep(1000);
                 window.close();
-                Game_selection::show_games();
+                end_game();
             }
             window.clear();
             window.draw(spriteTW[0]);
@@ -162,5 +162,5 @@ int Slots::random_number() {
 }
 
 void Slots::end_game() {
-
+    Game_selection::show_games();
 }

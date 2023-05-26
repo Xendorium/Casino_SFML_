@@ -39,7 +39,7 @@ public:
 
 
     /**<summary>
-    /// end_game();
+    /// back to the selection menu
     /// </summary>
     */
     void end_game() override;
