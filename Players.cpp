@@ -74,3 +74,6 @@ int Players::random_number() {
     return j;
 }
 
+enum card_type {
+
+};
