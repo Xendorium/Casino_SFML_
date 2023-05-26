@@ -3,7 +3,7 @@ project(Casino_SFML_)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Casino_SFML_ main.cpp Games.h Game_selection.cpp Game_selection.h Drawing.cpp Drawing.h Blackjack.cpp Blackjack.h Deck.h Players.cpp Players.h Slots.cpp Slots.h)
+add_executable(Casino_SFML_ WIN32 main.cpp Games.h Game_selection.cpp Game_selection.h Drawing.cpp Drawing.h Blackjack.cpp Blackjack.h Deck.h Players.cpp Players.h Slots.cpp Slots.h)
 
 include_directories(headers C:/SFML/include)
 
