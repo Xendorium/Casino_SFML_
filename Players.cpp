@@ -13,7 +13,7 @@
 #include "Players.h"
 
 void Players::draw(std::vector<Deck::card> &deck, int ilosc) {
-    int j = 0, i = 0, k = 0 ;
+    int j = 0, i = 0, k = 0;
     if (ilosc == 2) {
         do {
             j = random_number();
@@ -58,7 +58,8 @@ int Players::sum() {
 
 void Players::clear_hands(std::vector<Deck::card> &deck) {
     for (int i = 0; i < P_and_D_hand.size(); i++) {
-        Deck::card C1 = {P_and_D_hand[i].points, P_and_D_hand[i].sign, P_and_D_hand[i].points_BJ, P_and_D_hand[i].card_type};
+        Deck::card C1 = {P_and_D_hand[i].points, P_and_D_hand[i].sign, P_and_D_hand[i].points_BJ,
+                         P_and_D_hand[i].card_type};
         deck.push_back(C1);
     }
     hand.clear();

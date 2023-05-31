@@ -238,7 +238,7 @@ void Blackjack::start_game() {
         }
         window.display();
 
-       /* if (player->sum() > 21) {
+        if (player->sum() > 21) {
             end_game();
             wait(2);
             window.draw(spriteLW[0]);
@@ -246,7 +246,7 @@ void Blackjack::start_game() {
             wait(1);
             window.close();
             Game_selection::show_games();
-        }*/
+        }
     }
 }
 
