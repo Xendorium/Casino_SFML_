@@ -13,7 +13,7 @@
 #include "Players.h"
 
 void Players::draw(std::vector<Deck::card> &deck, int ilosc) {
-    int j, i, k;
+    int j = 0, i = 0, k = 0 ;
     if (ilosc == 2) {
         do {
             j = random_number();
@@ -30,7 +30,9 @@ void Players::draw(std::vector<Deck::card> &deck, int ilosc) {
         deck.erase(deck.begin() + i);
     }
     if (ilosc == 1) {
-        k = (rand() % (51 - P_and_D_hand.size()) + 0);
+        do {
+            k = (rand() % (51 - P_and_D_hand.size()) + 0);
+        } while (k == j || k == i);
         Deck::card C3 = deck[k];
         hand.push_back(C3);
         P_and_D_hand.push_back(C3);
@@ -56,7 +58,7 @@ int Players::sum() {
 
 void Players::clear_hands(std::vector<Deck::card> &deck) {
     for (int i = 0; i < P_and_D_hand.size(); i++) {
-        Deck::card C1 = {P_and_D_hand[i].points, P_and_D_hand[i].sign, P_and_D_hand[i].points_BJ};
+        Deck::card C1 = {P_and_D_hand[i].points, P_and_D_hand[i].sign, P_and_D_hand[i].points_BJ, P_and_D_hand[i].card_type};
         deck.push_back(C1);
     }
     hand.clear();
@@ -73,7 +75,3 @@ int Players::random_number() {
     } while (j >= 51 - P_and_D_hand.size() || j < 0);
     return j;
 }
-
-enum card_type {
-
-};
