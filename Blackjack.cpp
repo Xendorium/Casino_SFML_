@@ -251,8 +251,8 @@ void Blackjack::start_game() {
 }
 
 void Blackjack::end_game() {
-    player->clear_hands(*deck_ptr->deck_ptr);
-    dealer->clear_hands(*deck_ptr->deck_ptr);
+player->clear_hands(*deck_ptr->deck_ptr);
+dealer->clear_hands(*deck_ptr->deck_ptr);
 }
 
 void Blackjack::rules() {
