@@ -3,7 +3,7 @@
 Name - Casino(SFML)
 
 Project Casino(SFML) is something akin to a casino simulator.
-I decided to create it (as a final project for object programming) due to the fact that the idea of the casino itself and the randomness factor behind it have always interested me,
+I decided to create it due to the fact that the idea of the casino itself and the randomness factor behind it have always interested me,
 plus I knew I was going to have fun while writing it.
 
 The application mainly consists of a menu and a choice of one of two (two for now, roulette is planned to be added) games: Blackjack and Slots.
